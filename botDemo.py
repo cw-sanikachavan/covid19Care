@@ -7,9 +7,6 @@ import os
 
 TOKEN = "1156469077:AAGZvfC8XwNm7nqFUBvBhw6n2gYq1nb4WC4"
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
-#PORT = int(os.environ.get('PORT', 5000))
-
-
     
 def get_url(url):
     response = requests.get(url)
