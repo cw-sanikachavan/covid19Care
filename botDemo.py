@@ -63,6 +63,6 @@ def main():
     dp.add_handler(CommandHandler("containmentzone", containmentzone))
     dp.add_handler(MessageHandler(Filters.location, location))
     updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
-    updater.bot.setWebhook('https://warm-sands-70860.herokuapp.com/' + TOKEN)
+    updater.bot.setWebhook('https://quiet-escarpment-71463.herokuapp.com/' + TOKEN)
 if __name__ == '__main__':
     main()
