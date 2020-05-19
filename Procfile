@@ -1,1 +1,1 @@
-web: python botDemo.py
+web: python covid19care.py
