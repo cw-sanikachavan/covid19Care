@@ -1,13 +1,8 @@
 from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, RegexHandler,ConversationHandler)
 from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove)
-import requests
-import itertools  
-import re
-import json
-import time
-import os
-import telegram
+import requests, itertools, re, json, time, os, telegram
 from geopy.distance import geodesic
+from geopy.geocoders import Nominatim
 from covid import Covid
 import pandas as pd
 
@@ -16,11 +11,43 @@ t = "1115904035:AAG5x0dpPwmYNKRNBIHfjN7iADHTU4VN6UE"
 PORT = int(os.environ.get('PORT', 5000))
 LIVE_UPDATES, MENU, SET_STAT, CONTAINMENTZONE, TESTINGCENTERS, ECHO, SYMPTOMS, SAFETY = range(8)
 STATE = SET_STAT
+
 def live_updates(bot,update):
     try:
+        bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         covid = Covid()
         data = covid.get_status_by_country_name("india")
+        loc = update.message.location
+        user_lat = loc.latitude
+        user_long = loc.longitude
+        stateR = 0
+        stateA = 0
+        stateC = 0
+        stateD = 0
+        geolocator = Nominatim(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36")
+        location = geolocator.reverse(str(user_lat)+", "+str(user_long))
+        dataL = location.raw
+        district = dataL['address']['state_district']
+        state = dataL['address']['state']
+        print(district,state)
+        if district == "Mumbai Suburban":
+            district = "Mumbai"
+        print(district,state)
+        js = requests.get("https://api.covid19india.org/v2/state_district_wise.json").json()
+        for i in js:
+            if state == i['state']:
+                for j in i['districtData']:
+                    stateA = stateA + j['active']
+                    stateR = stateR + j['recovered']
+                    stateC= stateC + j['confirmed']
+                    stateD = stateD + j['deceased']
+                    if j['district'] == district:
+                        text = "Total Confirmed cases in "+district+" are: "+str(j['confirmed'])+"\nTotal Active cases in "+district+" are: "+ str(j['active'])+"\nTotal Recovered cases in "+district+" are: "+ str(j['recovered'])+"\nTotal Deceased cases in "+district+" are: "+ str(j['deceased'])
+                        print(str(j['confirmed']))
+        print(stateA)
         update.message.reply_text("Total Confirmed cases in India are: "+str(data['confirmed'])+"\nTotal Active cases in India are: "+ str(data['active'])+"\nTotal Recovered cases in India are: "+ str(data['recovered'])+"\nTotal Deceased cases in India are: "+ str(data['deaths']))
+        update.message.reply_text("Total Confirmed cases in "+state+" are: "+str(stateC)+"\nTotal Active cases in "+state+" are: "+ str(stateA)+"\nTotal Recovered cases in "+state+" are: "+ str(stateR)+"\nTotal Deceased cases in "+state+" are: "+ str(stateD))
+        update.message.reply_text(text)
         update.message.reply_text("Type /thanks if done or /menu to select another option.")
     except Exception as e:
         print(e)
@@ -124,8 +151,8 @@ def servicetype(bot, update):
         elif update.message.text == 'Live_Updates':
             print('l')
             STATE = LIVE_UPDATES
-            live_updates(bot,update)
-            return MENU
+            request_location(bot,update)
+            return LIVE_UPDATES
         else:
             STATE = MENU
             return MENU
@@ -164,7 +191,7 @@ def echo(bot, update):
     try:
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         text = "I'm sorry, I'm afraid I can't provide information for this."
-        update.messaage.reply_text(text)
+        update.message.reply_text(text)
     except Exception as e:
         print(e)    
 
@@ -180,8 +207,8 @@ def main():
             SET_STAT: [RegexHandler('^(Containment_Zone|Testing_Centers|Symptoms|Safety_Measures|Live_Updates)$',servicetype )],
             MENU: [CommandHandler('menu', menu)],
             CONTAINMENTZONE: [MessageHandler(Filters.location, containmentzone)],
-            TESTINGCENTERS: [MessageHandler(Filters.location, testingcenters)],
-            ECHO:[MessageHandler(Filters.text,echo)]
+            LIVE_UPDATES: [MessageHandler(Filters.location, live_updates)],
+            TESTINGCENTERS: [MessageHandler(Filters.location, testingcenters)]
              },
         fallbacks=[CommandHandler('start', start),CommandHandler('menu', menu),CommandHandler('thanks', thanks)]
     )
