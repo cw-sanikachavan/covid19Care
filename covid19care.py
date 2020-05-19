@@ -65,7 +65,7 @@ def testingcenters(bot,update):
         user_lat = loc.latitude
         user_long = loc.longitude
         locTup = (user_lat,user_long)
-        worksheet = pd.read_csv('testcenter.csv')
+        worksheet = pd.read_csv('https://raw.githubusercontent.com/sanikachavan/covid19Care/master/testcenter.csv',sep=",")
         types = worksheet['Type'].tolist()
         hospitals = worksheet['Hospital'].tolist()
         latitude = worksheet['Latitude'].tolist()
