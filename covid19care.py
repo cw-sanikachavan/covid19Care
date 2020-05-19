@@ -170,7 +170,7 @@ def echo(bot, update):
         print(e)    
 
 def main():
-    updater = Updater(t)
+    updater = Updater(TOKEN)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
