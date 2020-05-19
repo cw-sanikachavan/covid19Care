@@ -8,8 +8,8 @@ import time
 import os
 import telegram
 from geopy.distance import geodesic
-import gspread
 from covid import Covid
+import pandas as pd
 
 TOKEN = "1156469077:AAGZvfC8XwNm7nqFUBvBhw6n2gYq1nb4WC4"
 t = "1115904035:AAG5x0dpPwmYNKRNBIHfjN7iADHTU4VN6UE"
@@ -65,12 +65,11 @@ def testingcenters(bot,update):
         user_lat = loc.latitude
         user_long = loc.longitude
         locTup = (user_lat,user_long)
-        gc = gspread.service_account(filename='service_account.json')
-        worksheet = gc.open('FinalSheet').sheet1
-        types = worksheet.col_values(3)
-        hospitals = worksheet.col_values(4)
-        latitude = worksheet.col_values(5)
-        longitude = worksheet.col_values(6)
+        worksheet = pd.read_csv('testcenter.csv')
+        types = worksheet['Type'].tolist()
+        hospitals = worksheet['Hospital'].tolist()
+        latitude = worksheet['Latitude'].tolist()
+        longitude = worksheet['Longitude'].tolist()
         for (a, b, c, d) in zip(types, hospitals, latitude, longitude):
             hospTup = (c,d)
             dist = geodesic(locTup, hospTup).miles
@@ -188,9 +187,9 @@ def main():
     )
 
     dp.add_handler(conv_handler)
-    #updater.start_polling()
-    #updater.idle()
-    updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
-    updater.bot.setWebhook('https://quiet-escarpment-71463.herokuapp.com/' + TOKEN)
+    updater.start_polling()
+    updater.idle()
+    #updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
+    #updater.bot.setWebhook('https://quiet-escarpment-71463.herokuapp.com/' + TOKEN)
 if __name__ == '__main__':
     main()

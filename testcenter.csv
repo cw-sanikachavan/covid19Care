@@ -1,0 +1,461 @@
+Sr. No.,State,Type,Hospital,Latitude,Longitude
+1,Andhra Pradesh,RT-PCR,"Sri Venkateswara Institute of Medical Sciences,",13.6379,79.4039
+2,Andhra Pradesh,RT-PCR,"Sri Venkateswara Medical College, Tirupati",13.6379,79.4039
+3,Andhra Pradesh,RT-PCR,"Rangaraya Medical College, Kakinada",16.9792,82.2373
+4,Andhra Pradesh,RT-PCR,"Sidhartha Medical College, Vijaywada",16.5174,80.6713
+5,Andhra Pradesh,RT-PCR,"Govt. Medical College, Ananthpur",14.6712,77.5929
+6,Andhra Pradesh,RT-PCR,"Guntur Medical College, Guntur",16.2982,80.4383
+7,Andhra Pradesh,RT-PCR,"Rajiv Gandhi Institute of Medical Sciences, Kadapa",17.518709,78.61344
+8,Andhra Pradesh,RT-PCR,"Andhra Medical College, Visakhapatnam",15.8218,78.03884
+9,Andhra Pradesh,RT-PCR,"Govt. Kurnool Medical College, Kurnool",15.8208694,78.0381
+10,Andhra Pradesh,RT-PCR,"Govt. Medical College, Srikakulam",20.47445,85.88837
+11,Andhra Pradesh,TrueNat,"Damien TB Research Centre, Nellore",14.413,79.968
+12,Andhra Pradesh,TrueNat,"SVRR Govt. General Hospital, Tirupati",13.6447,79.4058
+13,Andhra Pradesh,TrueNat,"Community Health Centre, Gadi Veedhi Saluru,Vizianagaram",20.47445,85.88837
+14,Andhra Pradesh,TrueNat,"Community Health Centre, Bhimavaram, West Godavari,Godavari District",16.9174,81.3399
+15,Andhra Pradesh,TrueNat,"Community Health Centre, Patapatnam",18.7505,84.0916
+16,Andhra Pradesh,TrueNat,"Community Health Center, Nandyal Banaganapalli, Kurnool",15.8281,78.0373
+17,Andhra Pradesh,TrueNat,"GSL Medical College & General Hospital, Rajahnagram, East Godavari District",17.3213,82.0407
+18,Andhra Pradesh,TrueNat,"District Hospital, Madnapalle, Chittoor District",13.2172,79.1003
+19,Andhra Pradesh,TrueNat,"District Hospital APVVP, Pulivendula, Kadapa",14.4222,78.2263
+20,Andhra Pradesh,TrueNat,"District Hospital, Rajahmundry, East Godavari",17.3213,82.0407
+21,Andhra Pradesh,TrueNat,"District Hospital, Noonepalli, Nandyal, Kurnool",15.8281,78.0373
+22,Andhra Pradesh,TrueNat,"District Hospital, Anakapalli, Vishakhapatnam",15.8218,78.03884
+23,Andhra Pradesh,TrueNat,"District Hospital, Hindupur, Anantpur",13.8223,77.5009
+24,Andhra Pradesh,TrueNat,"District Hospital, Proddatur",14.7526,78.5541
+25,Andhra Pradesh,TrueNat,"District Hospital, Machlipatnam",16.1809,81.1303
+26,Andhra Pradesh,TrueNat,"District Hospital, Atmakur",15.879,78.5853
+27,Andhra Pradesh,TrueNat,"District Hospital, Markapur",15.7362,79.2691
+28,Andhra Pradesh,TrueNat,"District Hospital, Tekkali",18.6058,84.2302
+29,Andhra Pradesh,TrueNat,"Area Hospital, Rampachodavaram, East Godavari",17.4367,81.776
+30,Andhra Pradesh,TrueNat,"Area Hospital, Palamaner, Chittoor",13.1949,78.7474
+31,Andhra Pradesh,TrueNat,"Area Hospital, Amalapuram, East Godavari District",16.5775,82.0031
+32,Andhra Pradesh,TrueNat,"Area Hospital, Adoni, Kurnool",15.6319,77.2759
+33,Andhra Pradesh,TrueNat,"Area Hospital, Chirala",15.8167,80.3587
+34,Andhra Pradesh,TrueNat,"Area Hospital, Kandukuru",15.2197,79.9025
+35,Andhra Pradesh,TrueNat,"Area Hospital, Narsipatnam",17.6664,82.6105
+36,Andhra Pradesh,TrueNat,"Area Hospital, Parvathipuram",18.7817,83
+37,Andhra Pradesh,TrueNat,"Area Hospital, Tadepalligudem",16.8073,82
+38,Andhra Pradesh,TrueNat,"Area Hospital, Kavali",14.9132,80
+39,Andhra Pradesh,TrueNat,"Area Hospital, Tenali",16.2379,81
+40,Andhra Pradesh,TrueNat,"Area Hospital, Narasaraopet, Guntur",16.2359,80
+41,Andhra Pradesh,TrueNat,"Area Hospital, Macheria, Guntur",16.476,79
+42,Andhra Pradesh,TrueNat,"Area Hospital, Kadiri",14.1138,78
+43,Andhra Pradesh,TrueNat,"Area Hospital, Gandhinagar, Nuzividu",16.785,81
+44,Andhra Pradesh,TrueNat,"ACSR Govt. Medical College, Nellore",14.4493717,79.9873763
+45,Andhra Pradesh,TrueNat,"Rural Development Trust, Bathalpalli",16.2915189,80.4541588
+46,Andhra Pradesh,TrueNat,"Govt. General Hospital, Guntur",16.29152,80.45416
+47,Andhra Pradesh,TrueNat,"Govt. General Hospital/ RIMS, Ongole",15.50755,80.06079
+48,Andhra Pradesh,TrueNat,"DST Lab Govt. Chest Hospital, Vishakhapatnam",17.72148,83.2901
+49,Andhra Pradesh,TrueNat,"District Hospital, Vizianagram",18.11208,83.40522
+50,Andhra Pradesh,TrueNat,"District Hospital, Chittoor",13.1601,79.15555
+51,Arunachal Pradesh,RT-PCR,"Tomo Riba Institute of Health & Medical Sciences, Naharlagun",27.10322,93.69231
+52,Assam,RT-PCR,"Gauhati Medical College, Guwahati",26.1806,91.75394
+53,Assam,RT-PCR,"Regional Medical Research Center, Dibrugarh",27.48446,94.90194
+54,Assam,RT-PCR,"Jorhat Medical College, Jorhat",26.75779,94.20796
+55,Assam,RT-PCR,"Silchar Medical College, Silchar",24.81786,92.75622
+56,Assam,RT-PCR,"Fakkhruddin Ali Ahmed Medical College, Barpeta",26.34142,91.01674
+57,Assam,RT-PCR,"Tezpur Medical College, Tezpur",26.61696,92.76501
+58,Assam,RT-PCR,"Assam Medical College, Dibrugarh",27.48446,94.90194
+59,Bihar,RT-PCR,"Rajendra Memorial Research Institute of Medical Sciences, Patna",25.60932,85.12353
+60,Bihar,RT-PCR,"Indira Gandhi Institute Medical Sciences, Patna",25.60932,85.12353
+61,Bihar,RT-PCR,"Patna Medical College, Patna",25.60932,85.12353
+62,Bihar,RT-PCR,"Darbhanga Medical College, Darbhanga",26.08314,86.03257
+63,Bihar,RT-PCR,"SKMCH, Muzaffarpur",26.14866,85.34001
+64,Bihar,RT-PCR,"All India Institute of Medical Sciences, Patna",25.60932,85.12353
+65,Bihar,CB-NAAT,"Jawaharlal Nehru Medical College, Bhagalpur",25.2867,87.13225
+66,Chandigarh,RT-PCR,Post Graduate Institute of Medical Education & Research,30.7194,76.76466
+67,Chandigarh,RT-PCR,Govt. Medical College,30.7194,76.76466
+68,Chandigarh,RT-PCR,Institute of Microbial Technology,30.7194,76.76466
+69,Chhattisgarh,RT-PCR,"All India Institute of Medical Sciences, Raipur",21.23795,81.63368
+70,Chhattisgarh,RT-PCR,"Late Baliram Kashyap M Govt. Medical College,",19.08708,82.02357
+71,Chhattisgarh,RT-PCR,"JNM Medical College, Raipur",21.23795,81.63368
+72,Chhattisgarh,RT-PCR,Late Shri Lakhi Ram Agrawal Memorial,22.5,83.5
+73,Chhattisgarh,RT-PCR,"Govt. Medical College, Raigarh",22.5,83.5
+74,Chhattisgarh,TrueNat,"Intermediate Reference Laboratory, Lalpur,Raipur",21.23795,81.63368
+75,Delhi,RT-PCR,All India Institute Medical Sciences,28.65172,77.22194
+76,Delhi,RT-PCR,Lady Hardinge Medical College,28.65172,77.22194
+77,Delhi,RT-PCR,National Centre for Disease Control,28.65172,77.22194
+78,Delhi,RT-PCR,Ram Manohar Lohia Hospital,28.65172,77.22194
+79,Delhi,RT-PCR,Institute of Liver & Biliary Sciences,28.65172,77.22194
+80,Delhi,RT-PCR,Army Hospital Research & Referral,28.65172,77.22194
+81,Delhi,RT-PCR,Maulana Azad Medical College,28.65172,77.22194
+82,Delhi,RT-PCR,Vardhman Mahavir Medical College & Safdarjung,28.65172,77.22194
+83,Delhi,RT-PCR,Hospital,28.65172,77.22194
+84,Delhi,RT-PCR,University College of Medical Sciences,28.65172,77.22194
+85,Delhi,RT-PCR,Army Base Hospital,28.65172,77.22194
+86,Delhi,RT-PCR,"*IGIB, CSIR, New Delhi",28.65172,77.22194
+87,Delhi,RT-PCR,"Rajiv Gandhi Super Speciality Hospital, Taharpur,Delhi",28.65172,77.22194
+88,Delhi,RT-PCR,,28.65172,77.22194
+89,Delhi,CB NAAT,"State TB Training and Demonstration Centre, Jawaharlal Nehru Marg, Delhi Gate",28.65172,77.22194
+90,Gujarat,RT-PCR,"BJ Medical College, Ahmedabad",23.02162,72.57971
+91,Gujarat,RT-PCR,"MP Shah Govt Medical College, Jamnagar",22.47324,70.05521
+92,Gujarat,RT-PCR,"Govt. Medical College, Surat",21.1702,72.8311
+93,Gujarat,RT-PCR,"Govt. Medical College, Bhavnagar",21.77188,72.14164
+94,Gujarat,RT-PCR,"Govt. Medical College, Vadodara",22.29731,73.19426
+95,Gujarat,RT-PCR,"Govt. Medical College, Rajkot",22.3052,70.80283
+96,Gujarat,RT-PCR,"NHL Medical College, Ahmedabad",23.02162,72.57971
+97,Gujarat,RT-PCR,"GMERS, Ahmedabad",23.02162,72.57971
+98,Gujarat,RT-PCR,"GMERS, Gandhinagar",23.22329,72.64923
+99,Gujarat,RT-PCR,"GMERS, Valsad",20.4324,73.14117
+100,Gujarat,RT-PCR,"National Institute of Occupational Health, Ahmedabad",23.02162,72.57971
+101,Gujarat,RT-PCR,"Gujarat Cancer & Research Institute, Ahmedabad",23.02162,72.57971
+102,Gujarat,RT-PCR,"Surat Municipal Institute of Medical Education & Research (SMIMER), Surat .",21.1702,72.8311
+103,Gujarat,RT-PCR,"GMERS Medical College and Hospital, Dharpur- Patan, Gujarat",22.41541,72.0315
+104,Gujarat,RT-PCR,"Gujarat Adani Institute of Medical Sciences, Bhuj .",23.24724,69.66834
+105,Gujarat,RT-PCR,"Unipath Specialty laboratory limited, 102, Sanoma Plaza, Opposite Parimal Garden, Besides JMC House, Ellisbridge, Ahmedabad",23.02162,72.57971
+106,Gujarat,RT-PCR,"Supratech Micropath Laboratory & Research Institute Pvt Ltd, Kedar, Ahmedabad",23.02162,72.57971
+107,Gujarat,RT-PCR,"SN GeneLab Pvt Ltd, President Plaza ?A, Near Mahavir Hospital, Nanpura, Surat",21.1702,72.8311
+108,Gujarat,RT-PCR,"Pangenomics International Pvt Ltd, Ellis Bridge, Ahmedabad",23.02162,72.57971
+109,Gujarat,RT-PCR,"Dept of Lab Medicine, Zydus Hospitals & Healthcare Research Pvt Ltd, Zydus Hospital Road, Hebatpur, Off S.G. Highway, Thaltej, Ahmedabad",23.02162,72.57971
+110,Gujarat,RT-PCR,"Toprani Advanced Lab Systems, Suflam, 10, Haribhakti Colony, Race Course, Vadodra",22.32793,73.21874
+111,Gujarat,RT-PCR,"Dept of Lab Medicine, Apollo Hospitals International Ltd, 1, Bhat, GIDC Estate, Ahmedabad",23.02162,72.57971
+112,Gujarat,RT-PCR,"Divine lab, B 201/202, Mangalkirti Apartment, Fatehgunj, Vadodra",22.32793,73.21874
+113,Gujarat,RT-PCR,"Green Cross Genetics Lab Pvt Ltd, 104, Sears Towers, Ahmedabad",23.02162,72.57971
+114,Gujarat,RT-PCR,"Gujarat Biotechnology Research Center, Gandhinagar",23.22329,72.64923
+115,Gujarat,CB NAAT,"Dept of Lab Medicine, Bhailal Amin Gen Hospital, Alembic Road, Gorwa, Vadodra",22.32793,73.21874
+116,Goa,RT-PCR,"Goa Medical College, Goa",15.30045,74.08551
+117,Goa,TrueNat,"North District Hospital, Mapusa",15.59267,73.81176
+118,Goa,TrueNat,"Subdistrict Hospital, Ponda",15.4039,74.00975
+119,Goa,TrueNat,"South Goa District Hospital (Hospicio Hospital), Margao",15.27292,73.95832
+120,Goa,TrueNat,"Sub- District Hospital, Chicalim, Vasco Da Gama",15.3984,73.81292
+121,Haryana,RT-PCR,"Pt. B.D. Sharma Post Graduate Inst. Of Med. Sciences, Rohtak",28.90109,76.58019
+122,Haryana,RT-PCR,"Command Hospital, Chandimandir",30.72709,76.88722
+123,Haryana,RT-PCR,"BPS Govt. Medical College, Sonipat",29.00331,77.01673
+124,Haryana,RT-PCR,"ESIC Hospital, Faridabad",28.40284,77.30856
+125,Haryana,RT-PCR,"Kalpana Chawla Govt. Medical College, Karnal",29.68033,76.98963
+126,Haryana,RT-PCR,"Government Civil Hospital, Panchkula",30.61622,77.04198
+127,Haryana,RT-PCR,"ICAR-National Research Centre on Equines, Hisar",29.16881,75.74611
+128,Haryana,RT-PCR,"Strand Life Sciences, A-17, Sector 34, Gurugram",28.46461,77.02992
+129,Haryana,RT-PCR,"SRL Limited, GP26, Sector 18, Gurugram",28.46461,77.02992
+130,Haryana,RT-PCR,"Modern Diagnostic & Research Centre-Lab, 363- 364/4, JAwahar Nagar. Gurgaon",28.42826,77.0027
+131,Haryana,RT-PCR,"Core Diagnostics Pvt Ltd, Udyog Vihar Phase-3, Gurgaon",28.42826,77.0027
+132,Haryana,RT-PCR,"MolQ Laboratory, Plot 28,29; Sector 18(P), Electronic city, Udyog Vihar, Phase IV, Gurgaon",28.42826,77.0027
+133,Haryana,RT-PCR,"Pathkind Diagnostics Pvt Ltd, Plot 55-56, Phase 4, Udyog Vihar, Sec 18, Gurgaon 31. Department of Pathology and Laboratory Medicine, Medanta-The Medicity, Sector 38, Gurgaon",28.42826,77.0027
+134,Haryana,RT-PCR,"Department of Pathology and Laboratory Medicine, Medanta-The Medicity, Sector 38, Gurgaon",28.42826,77.0027
+135,Haryana,RT-PCR,"Translational Health Science & Technology Institute, Faridabad",28.4089,77.3178
+136,Haryana,CB Naat,"IRL, Haryana Govt. Public Health Laboratory, Karnal",29.68033,76.98963
+137,Haryana,CB Naat,"SHKM, Govt. Medical College, Mewat",28.0107,77.0564
+138,Haryana,CB Naat,"Maharaj Agrasen Medical College, Agroha, Hisar",29.16881,75.74611
+139,Himachal,RT-PCR,"Indira Gandhi Medical College, Shimla",31.10415,77.17097
+140,Himachal,RT-PCR,"Dr. Rajendra Prasad Govt. Medical College, Tanda",26.51607,82.69435
+141,Himachal,RT-PCR,"Central Research Institute, Kasauli",30.85844,76.99797
+142,Himachal,RT-PCR,"Shri Lal Bahadur Shastri Govt. Medical College, Mandi",33.86883,74.3188
+143,Himachal,RT-PCR,"CSIR Institute of Himalayan Bioresource Technology, Palampur",32.0893,76.50989
+144,Jammu & Kashmir,RT-PCR,"Govt. Medical College, Jammu",32.71856,74.85809
+145,Jammu & Kashmir,RT-PCR,Command Hospital (NC) Udhampur,33,75.16667
+146,Jammu & Kashmir,RT-PCR,"Sher-i-Kashmir Institute of Medical Sciences, Srinagar",34.07474,74.82044
+147,Jammu & Kashmir,RT-PCR,"Govt. Medical College, Srinagar",34.07474,74.82044
+148,Jammu & Kashmir,RT-PCR,"Sheri Kashmir Institute of Medical Science Medical College, Bemina, Srinagar",34.07474,74.82044
+149,Jammu & Kashmir,RT-PCR,"Tata Main Hospital (Dept of Pathology), Tata Steel, Bistupur, Jamshedpur",22.80152,86.20296
+150,Jharkhand,RT-PCR,"MGM Medical College & Hospital, Jamshedpur",22.80152,86.20296
+151,Jharkhand,RT-PCR,"Rajendra Institute of Medical Sciences, Ranchi",23.37004,85.32501
+152,Jharkhand,RT-PCR,"Patliputra Medical College & Hospital, Dhanbad",23.79528,86.43096
+153,Jharkhand,RT-PCR,"Itki Aarogyashala, Ranchi",23.37004,85.32501
+154,Karnataka,RT-PCR,"Hassan Inst. Of Med. Sciences, Hassan",13.00708,76.09927
+155,Karnataka,RT-PCR,"Mysore Medical College & Research Institute, Mysore",12.30518,76.65536
+156,Karnataka,RT-PCR,"Shivamogga Institute of Medical Sciences, Shivamogga",13.93117,75.56974
+157,Karnataka,RT-PCR,"Command Hospital (Air Force), Bengaluru",12.97912,77.5913
+158,Karnataka,RT-PCR,"Bangalore Medical College & Research Institute, Bengaluru",12.97912,77.5913
+159,Karnataka,RT-PCR,"National Institute of Virology, Bangalore Field Unit, Bengaluru",12.97912,77.5913
+160,Karnataka,RT-PCR,"Indian Institute of Science, Bengaluru (Department of Biochemistry, Centre for Infectious Disease Research)",12.97912,77.5913
+161,Karnataka,RT-PCR,"Gulbarga Institute of Medical Sciences, Gulbarga",17.16667,77.08333
+162,Karnataka,RT-PCR,"Vijaynagar Institute of Medical Sciences, Bellary",15.14673,76.91252
+163,Karnataka,RT-PCR,"National Institute of Mental Health and Neuro- Sciences, Bangalore",12.97912,77.5913
+164,Karnataka,RT-PCR,"Neuberg Anand Reference Laboratory, Anand Tower, #54, Bowring Hospital Road, Bengaluru",12.97912,77.5913
+165,Karnataka,RT-PCR,"Cancyte Technologies Pvt Ltd, Sri Shankara Research Centre, Bengaluru",12.97912,77.5913
+166,Karnataka,RT-PCR,"Central Diagnostic Lab, Vydehi Institute of Medical Sciences and Research Centre, #82, E.P.I.P. Area, Whitefield, Bengaluru",12.97912,77.5913
+167,Karnataka,RT-PCR,"Syngene International Limited, Biocon Park, SEZ, Bommasandra Industrial Area, Phase IV, Bommasandra-Jigani Link Road, Bengaluru",12.97912,77.5913
+168,Karnataka,RT-PCR,"Department of Lab Medicine, Narayana Hrudayalaya Ltd, 258/A, Bommasandra Industrial Area, Hosur Road, Bengaluru",12.97912,77.5913
+169,Karnataka,RT-PCR,"Aster Clinical Lab LLP, No 24, Venkatappa Road, Tasker Town, Vasanthanagar, Bangalore",12.97912,77.5913
+170,Karnataka,RT-PCR,"Microbiological Lab, 22-D 3, KIADB Industrial Area, 1st Phase, Kumbalagidu, Bengaluru",12.97912,77.5913
+171,Karnataka,RT-PCR,"Yenepoya Medical College Hospital Lab, Nithyananda Nagar, Derlakatte, Mangaluru",12.9141,74.856
+172,Karnataka,RT-PCR,"Hybrinomics Life Science and diagnostics LLP, Site No 50, Maruthi Township, B. Hanumanthanagar, Bileshivale, Doddagubbi Post, Bengaluru",13.0715,77.6742
+173,Karnataka,RT-PCR,"Shamanur Shivashankarappa Institute of Medical Sciences and Research Centre (SSIMSRC), Davangere",14.4644,75.9218
+174,Karnataka,RT-PCR,"XCyton Diagnostics Pvt Ltd ? Molecular Diagnostic Services, #449, 10th Cross, 4th phase, Peenya, Bengaluru",12.97912,77.5913
+175,Karnataka,RT-PCR,"Wenlock District Hospital, Mangalore",12.9141,74.856
+176,Karnataka,RT-PCR,"Karnataka Institute of Medical Sciences, Hubli",15.3647,75.124
+177,Karnataka,RT-PCR,"National Institute of Traditional Medicine, Belagavi",15.8497,74.4977
+178,Karnataka,RT-PCR,"Dharwad Institute of Mental Health & Neurosciences, Dharwad",15.3778,75.2479
+179,Karnataka,RT-PCR,"Kidwai Memorial Institute of Oncology, Bengaluru",12.97912,77.5913
+180,Karnataka,RT-PCR,"Instem, Bengaluru",12.97912,77.5913
+181,Karnataka,RT-PCR,"Mandya Institute of Medical Sciences (MIMS), Mandya",12.5644,76.7337
+182,Karnataka,CB NAAT,"Gadag Institute of Medical Sciences, Gadag",15.4026,75.6208
+183,Karnataka,CB NAAT,"Tumkur District Hospital, Tumkur",13.371,76.6413
+184,Karnataka,CB NAAT,"Vijayapura District Hospital, Vijayapura",16.6148,75.8999
+185,Karnataka,CB NAAT,"Sakra World Hospital Lab Services, Devarabeesanahalli VArthur Hobli, Bengaluru",12.97912,77.5913
+186,Karnataka,CB NAAT,"Lab Services, Apollo Hospitals, 154/11, Bannerghatta Road, Bengaluru",12.97912,77.5913
+187,Karnataka,CB NAAT,"KLES Dr Prabhakar Kore Hospital & MRC Hi Tech Lab, NehruNagar, Belgaum, Belagavi",15.8497,74.4977
+188,Karnataka,CB NAAT,"Belgaum Institute of Medical Sciences, Belgaum",15.8497,74.4977
+189,Kerala,RT PCR,"National Institute of Virology, Field Unit, Alappuzha",9.488701,76.41256
+190,Kerala,RT PCR,"Govt. Medical College, Thiruvanathapuram",8.525315,76.96114
+191,Kerala,RT PCR,"Govt. Medical College, Kozhikode",11.24461,75.77594
+192,Kerala,RT PCR,"Govt. Medical College, Thrissur",10.52563,76.21325
+193,Kerala,RT PCR,"Rajiv Gandhi Center for Biotechnology, Thiruvanathapuram",8.525315,76.96114
+194,Kerala,RT PCR,"Sree Chitra Tirunal Institute of Medical Sciences, Thiruvanathapuram",8.525315,76.96114
+195,Kerala,RT PCR,"Inter University, Kottayam",9.62857,76.64553
+196,Kerala,RT PCR,"Malabar Cancer Center, Thalassery",11.87927,75.71205
+197,Kerala,RT PCR,"Central University of Kerala, Periye, Kasaragod",12.42171,75.19045
+198,Kerala,RT PCR,"Govt. Medical College, Ernakulum",10.00672,76.31306
+199,Kerala,RT PCR,"Govt. Medical College, Manjeri",11.12019,76.1198
+200,Kerala,RT PCR,"Govt. Medical College, Kottayam",9.62857,76.64553
+201,Kerala,RT PCR,"DDRC SRL Diagnostics Pvt Ltd, Panampilly Nagar, Ernakulam",10.03839,76.50741
+202,Kerala,RT PCR,"MIMS Lab Services, Govindapuram, Kozhikode",11.24461,75.77594
+203,Kerala,RT PCR,"Lab Services of Amrita Institute of Medical Sciences & Research Centre, AIMS-Ponekkara, Kochi",9.9312,76.2673
+204,Kerala,RT PCR,"Dane Diagnostics Pvt Ltd, 18/757 (1), RC Road, Palakkad",10.7692,76.65125
+205,Kerala,RT PCR,"Medivision Scan & Diagnostic Research Centre Pvt Ltd, Sreekandath Road, Kochi",33.6569,133.5606
+206,Kerala,RT PCR,"Govt. Medical College, Kannur",11.87623,75.3738
+207,Kerala,CB NAAT,"Dept of Pathology and Lab Medicine, Aster Medcity, Aster DM Healthcare Ltd, Kutty Sahib Road, Kothad, Cochin",9.9312,76.2673
+208,Kerala,CB NAAT,"Regional Cancer Centre, Thiruvananthapuram",8.525315,76.96114
+209,Maharashtra,RT-PCR,"National Institute of Virology, Pune",18.52143,73.85445
+210,Maharashtra,RT-PCR,"Seth GS Medical College & KEM Hospital, Mumbai",18.93877,72.83534
+211,Maharashtra,RT-PCR,"Kasturba Hospital for Infectious Diseases, Mumbai",18.93877,72.83534
+212,Maharashtra,RT-PCR,"National Institute of Virology Field Unit, Mumbai",18.93877,72.83534
+213,Maharashtra,RT-PCR,"Armed Forces Medical College, Pune",18.52143,73.85445
+214,Maharashtra,RT-PCR,"BJ Medical College, Pune",18.52143,73.85445
+215,Maharashtra,RT-PCR,"Command Hospital (SC), Pune",18.52143,73.85445
+216,Maharashtra,RT-PCR,"Indira Gandhi Govt. Medical College, Nagpur",21.14981,79.08206
+217,Maharashtra,RT-PCR,"All India Institute of Medical Sciences, Nagpur",21.14981,79.08206
+218,Maharashtra,RT-PCR,"Govt. Medical College, Nagpur",21.14981,79.08206
+219,Maharashtra,RT-PCR,"Nagpur Veterinary College, MAFSU, Nagpur",21.14981,79.08206
+220,Maharashtra,RT-PCR,"Intermediate Reference Laboratory, Nagpur",21.14981,79.08206
+221,Maharashtra,RT-PCR,"Grant Medical College & Sir JJ Hospital, Mumbai",18.93877,72.83534
+222,Maharashtra,RT-PCR,"Govt. Medical College, Aurangabad",19.87726,75.33902
+223,Maharashtra,RT-PCR,"V. M. Government Medical College, Solapur",17.84991,75.27632
+224,Maharashtra,RT-PCR,"Haffkine Institute, Mumbai",18.93877,72.83534
+225,Maharashtra,RT-PCR,"Shree Bhausaheb Hire Govt. Medical College, Dhule",21.1305,74.47891
+226,Maharashtra,RT-PCR,"Government Medical College, Miraj",16.85852,74.71089
+227,Maharashtra,RT-PCR,"Govt. Medical College, Akola",20.76186,77.19217
+228,Maharashtra,RT-PCR,"National Institute for Research on Reproductive Health, Mumbai",18.93877,72.83534
+229,Maharashtra,RT-PCR,"Rajiv Gandhi Medical College & CSM Hospital, Kalwa, Thane, Mumbai",18.93877,72.83534
+230,Maharashtra,RT-PCR,"National AIDS Research Institute, Pune",18.52143,73.85445
+231,Maharashtra,RT-PCR,"Thyrocare Technologies Limited, D37/1, TTC MIDC, Turbhe, Navi Mumbai",19.03083,73.01985
+232,Maharashtra,RT-PCR,"Suburban Diagnostics (India) Pvt. Ltd., 306, 307/T, 3rd Floor, Sunshine Bld., Andheri (W), Mumbai",18.93877,72.83534
+233,Maharashtra,RT-PCR,"Metropolis Healthcare Ltd, Unit No. 409-416, 4th Floor, Commercial Building-1, Kohinoor Mall, Mumbai",18.93877,72.83534
+234,Maharashtra,RT-PCR,"Sir H.N. Reliance Foundation Hospital and Research Centre, Molecular Medicine, Reliance Life Sciences Pvt. Ltd., R-282, TTC Industrial Area, Rabale, Navi Mumbai",19.03083,73.01985
+235,Maharashtra,RT-PCR,"SRL Limited, Prime Square Building, Plot No 1, Gaiwadi Industrial Estate, SV Road, Goregaon, Mumbai",18.93877,72.83534
+236,Maharashtra,RT-PCR,"A.G. Diagnostics Pvt Ltd, Nayantara Building, Pune",18.52143,73.85445
+237,Maharashtra,RT-PCR,"Kokilaben Dhirubhai Ambani Hospital Laboratory, Four Bungalows, Mumbai",18.93877,72.83534
+238,Maharashtra,RT-PCR,"InfeXn Laboratories Private Limited, A/131, Therelek Compound, Road No 23, Wagle Industrial Estate, Thane (W)",19.19146,72.97756
+239,Maharashtra,RT-PCR,"iGenetic Diagnostics Pvt Ltd, Krislon House, Andheri East, Mumbai",18.93877,72.83534
+240,Maharashtra,RT-PCR,"Sahyadri Speciality Labs, Plot No 54, S.No. 89-90, Lokmanya Colony, Kothrud, Pune",18.52143,73.85445
+241,Maharashtra,RT-PCR,"Metropolis Healthcare Limited, Construction House, 796/189-B, Bhandarkar Institute Road, Pune",18.52143,73.85445
+242,Maharashtra,RT-PCR,"SRL Diagnostics ? Dr. Avinash Phadke (SRL Diagnostics Pvt Ltd), Mahalaxmi Engineering Estate, 2nd Floor, L.J. Cross Road No 1, KJ Khilnani High School, Mahim (West), Mumbai",18.93877,72.83534
+243,Maharashtra,RT-PCR,"Department of Laboratory Medicine ? P.D. Hinduja National Hospital and Medical Research Centre, Veer Savarkar Marg, Mahim, Mumbai",18.93877,72.83534
+244,Maharashtra,RT-PCR,"Vaidya Lab Thane, Unit of Millenium Special Lab Pvt Ltd, Odyssey Park, 2nd Floor, 201, Raghunath Nagar, Wagle Estate, Thane",19.19433,72.97018
+245,Maharashtra,RT-PCR,"Genepath Diagnostics India Pvt Ltd, 4th Floor, Above Phadke Hospital, Pune",18.52143,73.85445
+246,Maharashtra,RT-PCR,"Daignostic Molecular Laboratory, Dept of Microbiology, Dr. Vasantrao Pawar Medical College Hospital & Research Centre, Vasantdada Nagar, Adgaon, Nashik",20.01125,73.79024
+247,Maharashtra,RT-PCR,"Dept of Lab Medicine, Dr. Balabhai Nanavati Hospital, Swami Vivekananda Road, Mumbai",18.93877,72.83534
+248,Maharashtra,RT-PCR,"Krsnaa Diagnostics Pvt Ltd, Lt. Jayabai Nanasaheb Sutar Maternity Home, Pune",18.52143,73.85445
+249,Maharashtra,RT-PCR,"Dhruv Pathology and Molecular Diagnostic Lab, Third Floor, Aditya Enclave, Central Bazaar Road, Ramdaspeth, Nagpur",21.14981,79.08206
+250,Maharashtra,RT-PCR,"Dept of Molecular Biology & Genetics, Krishna Institute of Medical Sciences, Karad, Satara",17.63613,74.29828
+251,Maharashtra,RT-PCR,"Lab Services, Ayugen Biosciences Pvt Ltd, 562/1, Shivajinagar, Pune",18.52143,73.85445
+252,Maharashtra,RT-PCR,"MGM Medical College and Hospital, Navi Mumbai",19.033,73.0297
+253,Maharashtra,RT-PCR,"Swami Ramanand Teerth Marathwada University, Nanded",19.1383,77.321
+254,Maharashtra,RT-PCR,"Mahatma Gandhi Institute of Medical Sciences, Sevagram, Wardha",20.7453,78.6022
+255,Maharashtra,RT-PCR,"Vilasrao Deshmukh Govt. Institute of Medical Sciences, Latur",18.4088,76.5604
+256,Maharashtra,RT-PCR,"INHS Ashvini, Mumbai",18.93877,72.83534
+257,Maharashtra,RT-PCR,"Tata Memorial Centre ACTREC, Mumbai",18.93877,72.83534
+258,Maharashtra,RT-PCR,"Tata Memorial Hospital, Mumbai",18.93877,72.83534
+259,Maharashtra,RT-PCR,"National Centre for Cell Sciences, Pune",18.52143,73.85445
+260,Maharashtra,RT-PCR,"National Environmental Engineering Institute, Nagpur",21.14981,79.08206
+261,Maharashtra,RT-PCR,"Sant Gadge Baba Amravati University, Amravati",20.932,77.7523
+262,Maharashtra,RT-PCR,"RCSM Govt. Medical College, Kolhapur",16.705,74.2433
+263,Maharashtra,CB NAAT,"Intermediate Reference Laboratory, Pune",18.52143,73.85445
+264,Maharashtra,TrueNat,"Ruby Hall Clinic, Dept of Laboratory, Grant Medical Foundation, 40, Sassoon Road, Pune",18.52143,73.85445
+265,Madhya Pradesh,RT-PCR,"All India Institute of Medical Sciences, Bhopal",23.25849,77.40199
+266,Madhya Pradesh,RT-PCR,"National Institute for Research on Tribal Health, Jabalpur",23.16089,79.94977
+267,Madhya Pradesh,RT-PCR,"Mahatma Gandhi Memorial Medical College, Indore",22.72036,75.8682
+268,Madhya Pradesh,RT-PCR,"Gandhi Medical College, Bhopal",23.25849,77.40199
+269,Madhya Pradesh,RT-PCR,"Bhopal Memorial Hospital & research Centre, Bhopal",23.25849,77.40199
+270,Madhya Pradesh,RT-PCR,"Gajra Raja Medical College, Gwalior",26.20372,78.15736
+271,Madhya Pradesh,RT-PCR,"Qualilife Diagnostics, Balaji Arcade, 1st Floor, 544/A, Netaji Subhash Road, Mulund (W), Mumbai",18.93877,72.83534
+272,Madhya Pradesh,RT-PCR,"Chirayu Medical College & Hospital, Bhopal Indore Highway, Bhaisakhedi, Bhopal 81. #Central Research Lab, R D Gardi Medical College, Surasa, Ujjain",23.1746,75.78514
+273,Madhya Pradesh,RT-PCR,"Central Research Lab, R D Gardi Medical College, Surasa, Ujjain",23.1746,75.78514
+274,Madhya Pradesh,RT-PCR,"Central Lab, MZ 117-118, Yeshwant Plaza, Indore",22.72036,75.8682
+275,Madhya Pradesh,RT-PCR,"Lab Medicine, Bansal Hospital, A unit of Ayushman Medical Diagnostics Pvt Ltd, C-sector Shahpura, Bhopal",23.25849,77.40199
+276,Madhya Pradesh,RT-PCR,"SS Medical College, Rewa",24.75927,81.655
+277,Madhya Pradesh,RT-PCR,"Defence Research & Development Organization, Gwalior",26.20372,78.15736
+278,Madhya Pradesh,RT-PCR,"ICAR-NIHSAD, Bhopal",23.25849,77.40199
+279,Madhya Pradesh,RT-PCR,"Government Medical College, Ratlam",23.50196,74.95285
+280,Madhya Pradesh,RT-PCR,"Netaji Subhash Chandra Bose Medical College, Jabalpur",23.16089,79.94977
+281,Madhya Pradesh,TrueNat,"Sampurna Sodani Diagnostic Clinic, LG-1, Morya Centre, 16/1, Race Course Road, Indore",22.72036,75.8682
+282,Manipur,RT-PCR,"Jawaharlal Nehru Institute of Med. Sciences, Imphal-East, Manipur",24.72088,93.92294
+283,Manipur,RT-PCR,"Regional Institute of Medical Sciences, Imphal",24.80061,93.937
+284,Meghalaya,RT-PCR,"North Eastern Indira Gandhi Regional Institute of Health & Medical Sciences, Shillong, Meghalaya",25.53794,91.29991
+285,Meghalaya,RT-PCR,"Pasteur Institute, Shillong",25.57604,91.88253
+286,Meghalaya,RT-PCR,"Civil Hospital, Tura",25.5141,90.2032
+287,Mizoram,RT-PCR,Zoram Medical College,23.62422,92.72816
+288,Nagaland,RT-PCR,"Imkongliba Memorial District Hospital, Mokokchung",26.47959,94.51053
+289,Nagaland,RT-PCR,"District Hospital, Mon",26.8038,94.9767
+290,Nagaland,RT-PCR,"Dept of Lab Services, Apollo Hospitals, Bhubaneswar",20.26029,85.83945
+291,Odisha,RT-PCR,"Regional Medical Research Centre, Bhubaneshwar (High-throughput Laboratory)",20.26029,85.83945
+292,Odisha,RT-PCR,"All India Institute of Medical Sciences, Bhubaneshwar",20.26029,85.83945
+293,Odisha,RT-PCR,"SCB Medical College and Hospital, Cuttack",20.4686,85.8792
+294,Odisha,RT-PCR,"MKCG Medical College, Berhampur",21.49309,86.63273
+295,Odisha,RT-PCR,"Ispat General Hospital, Rourkela",22.23093,84.86787
+296,Odisha,RT-PCR,"Veer Surendra Sai institute of Medical Science & Research, Sambalpur",21.4,83.88333
+297,Odisha,RT-PCR,"Institute of Life Sciences, Bhubaneshwar",20.26029,85.83945
+298,Puducherry,RT-PCR,"Jawaharlal Institute of Postgraduate Medical Education & Research, Puducherry",11.93406,79.83064
+299,Puducherry,RT-PCR,"Indira Gandhi Medical College, Puducherry",11.93406,79.83064
+300,Punjab,RT-PCR,"Govt. Medical College, Amritsar",31.63431,74.87368
+301,Punjab,RT-PCR,"Tuli Diagnostic Centre, Majitha Road, Amritsar",31.63431,74.87368
+302,Punjab,RT-PCR,"Govt. Medical College, Patiala",30.20909,76.33987
+303,Punjab,RT-PCR,"Guru Gobind Singh Medical University, Faridkot",30.60093,74.79477
+304,Punjab,CB-NAAT,"Department of Microbiology, Dayanand Medical College & Hospital, Tagore Nagar, Civil Lines, Ludhiana",30.90902,75.8516
+305,Punjab,CB-NAAT,"IRL, Patiala",30.20909,76.33987
+306,Uttarakhand,RT-PCR,"Govt. Medical College, Haldwani",29.21516,79.52669
+307,Uttarakhand,RT-PCR,"Dr. Ahuja?s Pathology and Imaging Centre, 7-B, Astley Hall, Dehradun",30.32556,78.04368
+308,Uttarakhand,RT-PCR,"All India Institute of Medical Sciences, Rishikesh",30.10865,78.29162
+309,Uttarakhand,RT-PCR,"Doon Medical College, Dehradun",30.32556,78.04368
+310,Uttarakhand,RT-PCR,"Veer Chandra Singh Garhwali Govt. Institute of Medical Science & Research, Srinagar,Garhwal Pauri",30.14799,78.77595
+311,West Bengal,RT-PCR,"Institute of Post Graduate Medical Education & Research, Kolkata",22.54541,88.35678
+312,West Bengal,RT-PCR,"Medical College, Kolkata",22.54541,88.35678
+313,West Bengal,RT-PCR,"National Institute of Cholera & Enteric Diseases, Kolkata",22.54541,88.35678
+314,West Bengal,RT-PCR,"Midnapore Medical College, Midnapore",22.4672,87.17501
+315,West Bengal,RT-PCR,"North Bengal Medical College, Darjeeling",26.8349,88.30715
+316,West Bengal,RT-PCR,"Suraksha Diagnostic Pvt Ltd (Dept of Lab Services),12/1, Premises No 02/0327, DG Block (Newtown),Action Area 1D, Newtown, Kolkata",22.54541,88.35678
+317,West Bengal,RT-PCR,"Dr. Lal Pathlabs Ltd ? Kolkata Reference lab, Plot No CB-31/1, Premises No 031-0199, Street Action Area 1C, Newtown, Kolkata",22.54541,88.35678
+318,West Bengal,RT-PCR,"Apollo Gleneagles Hospitals, 58 Canal Circular Road, Kolkata",22.54541,88.35678
+319,West Bengal,RT-PCR,"Tata Medical Center, Rajarhat, Kolkata",22.54541,88.35678
+320,West Bengal,RT-PCR,"School of Tropical Medicine, Kolkata",22.54541,88.35678
+321,West Bengal,RT-PCR,"Malda Medical College & Hospital, Malda",25.00574,88.13985
+322,West Bengal,RT-PCR,"Command Hospital, Kolkata",22.54541,88.35678
+323,West Bengal,RT-PCR,"Chittaranjan National Cancer Institute, Kolkata",22.54541,88.35678
+324,West Bengal,RT-PCR,"R.G. Kar Medical College & Hospital, Kolkata
+Murshidabad Medical College, Behrampore,
+Murshidabad",24.1746,88.27213
+325,West Bengal,CB-NAAT,"Burdwan Medical College, Burdwan",23.24809,87.97391
+326,West Bengal,CB-NAAT,"AMRI Hospitals, Dept of Lab Medicine, JC 16-17, Sector III, Salt Lake City, Kolkata",22.54541,88.35678
+327,West Bengal,CB-NAAT,"The Calcutta Medical Research Institute (Dept of Pathology), 7/2 Diamond Harbour Raod, Kolkata",22.54541,88.35678
+328,West Bengal,CB-NAAT,"Laboratory Services, Peerless Hospitex Hospital & Research Centre, 360, Panchasayar, Kolkata",22.54541,88.35678
+329,Andaman & Nicobar Islands,RT-PCR,"Regional Medical Research Centre, Port Blair",11.66453,92.73904
+330,Andaman & Nicobar Islands,TrueNat,"A&N Islands Institute of Medical Sciences, Port Blair",11.66453,92.73904
+331,Andaman & Nicobar Islands,CB NAAT,"GB Pant Hospital, Port Blair",11.66453,92.73904
+332,Dadra & Nagar Haveli,RT-PCR,"Shri Vinoba Bhave Civil Hospital, Silvassa",20.27368,73.00458
+333,Sikkim,TrueNAT,"IRL, STNM Hospital, Gangtok",27.32905,88.61227
+334,Uttar Pradesh,RT-PCR,"King George Medical University, Lucknow",26.8381,80.9346
+335,Uttar Pradesh,RT-PCR,"Institute of Medical Sciences, Banaras Hindu University, Varanasi",25.33565,83.00763
+336,Uttar Pradesh,RT-PCR,"Jawaharlal Nehru Medical College, Aligarh",27.87699,78.13729
+337,Uttar Pradesh,RT-PCR,"Command Hospital, Lucknow",26.8381,80.9346
+338,Uttar Pradesh,RT-PCR,"Lala Lajpat Rai Memorial Medical College, Meerut",28.91667,77.68333
+339,Uttar Pradesh,RT-PCR,"Sanjay Gandhi Post Graduate Institute, Lucknow",26.8381,80.9346
+340,Uttar Pradesh,RT-PCR,"MLN Medical College, Allahabad",25.43813,81.8338
+341,Uttar Pradesh,RT-PCR,"Uttar Pradesh University of Medical Sciences (Formerly Uttar Pradesh RIMS), Saifai",26.91733,79.02484
+342,Uttar Pradesh,RT-PCR,"MLB Medical College, Jhansi",25.53103,78.65269
+343,Uttar Pradesh,RT-PCR,"Regional Medical Research Centre, Gorakhpur",26.67133,83.36458
+344,Uttar Pradesh,RT-PCR,"SN Medical College, Agra",27.17526,78.00982
+345,Uttar Pradesh,RT-PCR,"National JALMA Institute for Leprosy & Other Mycobacterial Diseases, Agra",27.17526,78.00982
+346,Uttar Pradesh,RT-PCR,"RML Mehrotra Pathology Pvt Ltd, Nirala Nagar, Lucknow",26.8381,80.9346
+347,Uttar Pradesh,RT-PCR,"Dept of Lab Medicine, Jaypee Hospital, Sector 128, Noida",28.57264,77.35476
+348,Uttar Pradesh,RT-PCR,"Central Lab, Sharda Hospital, Plot no 32,34, Knowledge Park-III, Greater Noida",28.46707,77.51376
+349,Uttar Pradesh,RT-PCR,"RML Hospital, Lucknow",26.8381,80.9346
+350,Uttar Pradesh,RT-PCR,"Govt. Institute of Medical Sciences, Noida",28.57264,77.35476
+351,Uttar Pradesh,RT-PCR,"GSVM Medical College, Kanpur",26.46091,80.32176
+352,Uttar Pradesh,RT-PCR,"National Institute of Biologicals, Noida (High- throughput Laboratory)",28.57264,77.35476
+353,Uttar Pradesh,RT-PCR,"BRD Medical College, Gorakhpur",26.67133,83.36458
+354,Uttar Pradesh,RT-PCR,"Indian Institute of Toxicology Research, Lucknow",26.8381,80.9346
+355,Uttar Pradesh,RT-PCR,"Birbal Sahni Institute of Palaeosciences, Lucknow",26.8381,80.9346
+356,Uttar Pradesh,RT-PCR,"Central Drug Research Institute, Lucknow",26.8381,80.9346
+357,Uttar Pradesh,RT-PCR,"ICAR- Indian Veterinary Research Institute (IVRI), Izatnagar",28.3889,79.42107
+358,Uttar Pradesh,RT-PCR,"Super specialty PediatricHospital and Postgraduate Teaching Institute (SSPHPGTI), Noida",28.57264,77.35476
+359,Tripura,RT-PCR,"Government Medical College, Agartala",23.83124,91.28238
+360,Telangana,RT-PCR,"Gandhi Medical College, Secunderabad",17.46909,78.50592
+361,Telangana,RT-PCR,"Osmania Medical College, Hyderabad",17.38879,78.46106
+362,Telangana,RT-PCR,"Sir Ronald Ross of Tropical & Communicable Diseases, Hyderabad.",17.38879,78.46106
+363,Telangana,RT-PCR,"Nizam?s Institute of Medical Sciences, Hyderabad",17.38879,78.46106
+364,Telangana,RT-PCR,"Institute of Preventive Medicine, Hyderabad",17.38879,78.46106
+365,Telangana,RT-PCR,"ESIC Medical College, Hyderabad",17.38879,78.46106
+366,Telangana,RT-PCR,"Kakatiya Medical College, Warangal",17.98061,79.59821
+367,Telangana,RT-PCR,"Centre for Cellular & Molecular Biology, Hyderabad",17.38879,78.46106
+368,Telangana,RT-PCR,"Centre for DNA Fingerprinting & Diagnostics, Hyderabad",17.38879,78.46106
+369,Telangana,RT-PCR,"Biognosys Technologies (India) Pvt Ltd, #8- 148/174/11, NRI Colony, Near Aleap Industrial Area, Medchal, Malkajgiri",17.44834,78.52897
+370,Telangana,RT-PCR,"Laboratory Services, Apollo Hospitals, 6th Floor, Health Street Building, Jubilee Hills, Hyderabad",17.38879,78.46106
+371,Telangana,RT-PCR,"Vijaya Diagnostic Centre Pvt Ltd, Street No 19, Himayath Nagar, Hyderabad",17.38879,78.46106
+372,Telangana,RT-PCR,"Vimta Labs Ltd, Plot No 142, Phase 2, IDA Cherlapally, Hyderabad",17.38879,78.46106
+373,Telangana,RT-PCR,"Apollo Health and Lifestyle Limited, Diagnostic Labortory, Bowenpally, Secunderabad",17.46909,78.50592
+374,Telangana,RT-PCR,"Dr. Remedies Labs Private Ltd, A3, Titus Plaza, Sharma Commercial Complex, Punjagutta, Hyderabad",17.38879,78.46106
+375,Telangana,RT-PCR,"Pathcare Labs Pvt Ltd, Medchal, Hyderabad",17.38879,78.46106
+376,Telangana,RT-PCR,"American Institute of Pathology And Lab Sciences Pvt Ltd, Citizens Hospital, Serilingampally, Hyderabad",17.38879,78.46106
+377,Telangana,RT-PCR,"Medcis Pathlabs India Pvt Ltd, Plot No 16 & 17, Swathi Plaza, Anand Nagar, New Bowenpally, Secunderabad",17.46909,78.50592
+378,Telangana,RT-PCR,"Department of Lab Medicine, Yashoda Hospital, 9th Floor, 1-1-156 & 157, Alexander Road, Secunderabad",17.46909,78.50592
+379,Telangana,RT-PCR,"Tenet Diagnostics, Plot No 51, Kineta Towers, Journalist Colony, Road No 3, Banjara Hills, Hyderabad",17.38879,78.46106
+380,Rajasthan,RT-PCR,"Sawai Man Singh Medical College, Jaipur",26.91619,75.82035
+381,Rajasthan,RT-PCR,"Rajasthan University of Health Sciences Medical College, Jaipur",26.91619,75.82035
+382,Rajasthan,RT-PCR,"Dr. Sampurnan and Medical College, Jodhpur",26.29677,73.03514
+383,Rajasthan,RT-PCR,"Central Lab, The Mahatma Gandhi University of Medical Sciences and Technology, RIICO Institution Area, Sitapura, Tonk Road, Jaipur",26.91619,75.82035
+384,Rajasthan,RT-PCR,"Dr. B Lal Clinical Lab Pvt Ltd, 6-E, Malviya Industrial Area, Malviya Nagar, Jaipur",26.91619,75.82035
+385,Rajasthan,RT-PCR,"Brig T.K. Narayanan Dept of Pathology, Santokaba Durlabhji Memorial Hospital Cum Medical Research Institute, Jaipur (TruNat and RTPCR)",26.91619,75.82035
+386,Rajasthan,RT-PCR,"Jhalawar Medical College, Jhalawar",24.31324,76.52224
+387,Rajasthan,RT-PCR,"RNT Medical College, Udaipur",24.57872,73.68626
+388,Rajasthan,RT-PCR,"SP Medical College, Bikaner",28.01593,73.31714
+389,Rajasthan,RT-PCR,"All India Institute of Medical Sciences, Jodhpur",26.29677,73.03514
+390,Rajasthan,RT-PCR,"JLN Medical College, Ajmer",26.4691,74.639
+391,Rajasthan,RT-PCR,"Govt. Medical College, Kota",25.19683,76.00089
+392,Rajasthan,RT-PCR,"National Institute for Implementation Research on Non-Communicable Diseases, Jodhpur",26.29677,73.03514
+393,Rajasthan,RT-PCR,"RVRS Govt. Medical College, Bhilwara",25.48877,74.69961
+394,Rajasthan,RT-PCR,"Government Medical College, Dungarpur",23.66667,73.75
+395,Rajasthan,RT-PCR,"Pandit Deendayal Upadhyaya Medical College, Churu",28.20614,74.69191
+396,Rajasthan,RT-PCR,"Government Medical College, Bharatpur",27.26521,77.36913
+397,Rajasthan,RT-PCR,"Government Medical College, Sikar",27.66283,75.02793
+398,Rajasthan,RT-PCR,"Government Medical College, Barmer",25.5819,71.61966
+399,Rajasthan,RT-PCR,"Government Medical College, Pali",25.60409,73.41561
+400,Tamil Nadu,RT-PCR,"King Institute of Preventive Medicine & Research, Chennai",13.08017,80.28383
+401,Tamil Nadu,RT-PCR,"Madras Medical College, Chennai",13.08017,80.28383
+402,Tamil Nadu,RT-PCR,"Stanley Medical College, Chennai",13.08017,80.28383
+403,Tamil Nadu,RT-PCR,"Govt. Kilpauk Medical College, Chennai",13.08017,80.28383
+404,Tamil Nadu,RT-PCR,"National Institute for Research in Tuberculosis, Chennai",13.08017,80.28383
+405,Tamil Nadu,RT-PCR,"State Public Health Laboratory, Chennai",13.08017,80.28383
+406,Tamil Nadu,RT-PCR,"National Institute of Epidemiology, Chennai",13.08017,80.28383
+407,Tamil Nadu,RT-PCR,"Dr. MGR Medical University, Chennai",13.08017,80.28383
+408,Tamil Nadu,RT-PCR,"Dr. ALM PG Institute of Basic Medical Sciences, Chennai",13.08017,80.28383
+409,Tamil Nadu,RT-PCR,"Govt. Medical College & Hospital, Omandurar Govt. Estate, Chennai",13.08017,80.28383
+410,Tamil Nadu,RT-PCR,"Govt. Theni Medical College, Theni",9.969664,77.4742
+411,Tamil Nadu,RT-PCR,"Tirunelveli Medical College, Tirunelveli",8.808234,77.81148
+412,Tamil Nadu,RT-PCR,"Govt. Medical College, Thiruvarur",10.73619,79.63319
+413,Tamil Nadu,RT-PCR,"Kumar Mangalam Govt. Medical College, Salem",44.93916,-123.033
+414,Tamil Nadu,RT-PCR,"Coimbatore Medical College, Coimbatore",11.00181,76.96284
+415,Tamil Nadu,RT-PCR,"Govt. Medical College & ESIC Hospital, Coimbatore",11.00181,76.96284
+416,Tamil Nadu,RT-PCR,"Govt. Medical College, Villupuram",11.93983,79.49456
+417,Tamil Nadu,RT-PCR,"Dept. of Clinical Virology, CMC, Vellore",12.79481,79.00064
+418,Tamil Nadu,RT-PCR,"Department of Laboratory Services, Apollo Hospitals Enterprise Ltd, Chennai",13.08017,80.28383
+419,Tamil Nadu,RT-PCR,"Neuberg Ehrlich Lab Pvt Ltd, 46-48 Masilamani Road, Balaji Nagar, Chennai",13.08017,80.28383
+420,Tamil Nadu,RT-PCR,"Sri Ramachandra Medical College & Research Institute, Porur, Chennai",13.08017,80.28383
+421,Tamil Nadu,RT-PCR,"Microbiology Lab, Veerakeralam Road, Coimbatore",11.00181,76.96284
+422,Tamil Nadu,RT-PCR,"YRG CARE, Taramani, Chennai",13.08017,80.28383
+423,Tamil Nadu,RT-PCR,"Hitech Diagnostic Centre- A Unit of Dr. Ganesan?s Hitech Diagnostic Centre PVt Ltd, Poonamallee High Road, Chennai",13.08017,80.28383
+424,Tamil Nadu,RT-PCR,"PSG Hospitals Diagnostic Centre, Avinashi Road, Peelamedu, Coimbatore",11.00181,76.96284
+425,Tamil Nadu,RT-PCR,"Medall Healthcare Pvt Ltd, 17, Race View Colony, 2nd street, Race Course Road, Guindy, Chennai",13.08017,80.28383
+426,Tamil Nadu,RT-PCR,"Meenakshi Labs Madurai A unit of Sunmed Healthcare Pvt Ltd, 2nd Floor, Meenakshi Mission Hospital and Research Centre, Madurai",9.926115,78.1141
+427,Tamil Nadu,RT-PCR,"Metropolis Healthcare Limited, No 3, Jaganathan Road, Nungambakkam, Chennai",13.08017,80.28383
+428,Tamil Nadu,RT-PCR,"Clinical Lab Services, Dr. Rela Institute & Medical Centre, #7, CLC Works Rd, Shankar Nagar, Chennai",13.08017,80.28383
+429,Tamil Nadu,RT-PCR,"Doctors? Diagnostic Centre, 123/1, Puthur High Road, Thiruchirapalli",10.76209,78.71277
+430,Tamil Nadu,RT-PCR,"Molecular Testing, Institute of Lab Medicine, Kovai Medical Center & Hospital, 99, Avinashi Road, Coimbatore",11.00181,76.96284
+431,Tamil Nadu,RT-PCR,"Madurai Medical College, Madurai",9.926115,78.1141
+432,Tamil Nadu,RT-PCR,"K A P Viswanatham Govt. Medical College, Trichy",10.80497,78.68703
+433,Tamil Nadu,RT-PCR,"Perundurai Medical College, Perundurai",11.2591,77.54606
+434,Tamil Nadu,RT-PCR,"Govt. Dharmapuri Medical College, Dharmapuri",12.0968,78.19304
+435,Tamil Nadu,RT-PCR,"Govt. Medical College, Vellore",12.79481,79.00064
+436,Tamil Nadu,RT-PCR,"Thanjavur Medical College, Thanjavur",10.78603,79.13815
+437,Tamil Nadu,RT-PCR,"Kanyakumari Govt. Medical College, Nagercoil",8.188047,77.42905
+438,Tamil Nadu,RT-PCR,"Govt. Thoothukudi Medical College, Thoothukudi",8.80526,78.14527
+439,Tamil Nadu,RT-PCR,"Institute of Vector Control & Zoonoses, Hosur",12.73288,77.83095
+440,Tamil Nadu,RT-PCR,"Pasteur Institute of India, Coonoor",11.32233,76.7748
+441,Tamil Nadu,RT-PCR,"Rajah Muthiah Medical College, Chidambaram",11.41018,79.67222
+442,Tamil Nadu,RT-PCR,"Government Medical College, Karur",10.93015,78.08485
+443,Tamil Nadu,RT-PCR,"Govt. Tiruvannamalai Medical College & Hospital, Tiruvannamalai",12.22721,79.07016
+444,Tamil Nadu,RT-PCR,"Chengalpattu Government Medical College, Kancheepuram",12.87961,79.70428
+445,Tamil Nadu,RT-PCR,"Lal Path Labs, Block -E, Sector 18, Rohini, Delhi",28.65172,77.22194
+446,Tamil Nadu,RT-PCR,"Dr Dangs Lab, C-2/1, Safadarjung Development Area, New-Delhi",28.65172,77.22194
+447,Tamil Nadu,RT-PCR,"Laboratory Services, Indraprastha Apollo Hospitals, Sarita Vihar, New Delhi",28.65172,77.22194
+448,Tamil Nadu,RT-PCR,"Max Lab, Max Super Spciality Hospital, Saket, New- Delhi",28.65172,77.22194
+449,Tamil Nadu,RT-PCR,"Sir Ganga Ram Hospital Clinical Lab Services, Sir Ganga Ram Hospital, Delhi",28.65172,77.22194
+450,Tamil Nadu,RT-PCR,"Oncquest Labs Ltd, 3-Factory Road, New-Delhi",28.65172,77.22194
+451,Tamil Nadu,RT-PCR,"Prognosis Laboratories, 515-16, Sector 19, Dwarka",28.65172,77.22194
+452,Tamil Nadu,RT-PCR,"City X-Ray & Scan Clinic Pvt Ltd, 4B/18, Tilak Nagar, New-Delhi",28.65172,77.22194
+453,Tamil Nadu,RT-PCR,"Lifeline Laboratory, H-11, Green Park Extension, New- Delhi",28.65172,77.22194
+454,Tamil Nadu,RT-PCR,"Dept of Lab Services, Dr. B.L. Kapur Memorial Hospital, 5, Pusa Road, New-Delhi",28.65172,77.22194
+455,Tamil Nadu,RT-PCR,"Dept of Laboratory Services, Action Cancer Hospital, A-4, Paschim Vihar (East), New-Delhi",28.65172,77.22194
+456,Tamil Nadu,RT-PCR,"Star Imaging & Path Lab Pvt Ltd, 4B/4, Tilak Nagar, New Delhi",28.65172,77.22194
+457,Tamil Nadu,RT-PCR,"Genestrings Diagnostic Centre Pvt Ltd, 3, MMTC, Geetanjali Enclave, New Delhi",28.65172,77.22194
+458,Tamil Nadu,RT-PCR,"Sterling Accuris Diagnostics, A divison of Sterling Accuris Wellness Pvt Ltd, C-65, Block C, Phase I, Okhla, New Delhi",28.65172,77.22194
