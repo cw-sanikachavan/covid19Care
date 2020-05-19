@@ -183,7 +183,7 @@ def main():
             TESTINGCENTERS: [MessageHandler(Filters.location, testingcenters)],
             ECHO:[MessageHandler(Filters.text,echo)]
              },
-        fallbacks=[CommandHandler('menu', menu),CommandHandler('thanks', thanks)]
+        fallbacks=[CommandHandler('start', start),CommandHandler('menu', menu),CommandHandler('thanks', thanks)]
     )
 
     dp.add_handler(conv_handler)
