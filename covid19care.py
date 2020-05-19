@@ -146,7 +146,7 @@ def start(bot, update):
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         time.sleep(2)
         keyboard = [['Containment_Zone', 'Testing_Centers','Symptoms','Safety_Measures','Live_Updates']]
-        text = "Hello "+update["message"]["chat"]["first_name"].capitalize()+"! My Name is CovidCare Bot. I can help you by letting you know if your location falls under a containment zone. Select an option to continue."
+        text = "Hello "+update["message"]["chat"]["first_name"].capitalize()+"! My Name is CovidCare Bot. I can help you by letting you by providing various details you need to know about corona virus. Select an option to continue."
         update.message.reply_text(text,reply_markup = ReplyKeyboardMarkup(keyboard,one_time_keyboard=True))
         return SET_STAT
     except Exception as e:
@@ -156,7 +156,7 @@ def thanks(bot, update):
     try:
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         time.sleep(2)
-        text = "You're Welcome "+update["message"]["chat"]["first_name"].capitalize()+"! Carry On."
+        text = "You're Welcome "+update["message"]["chat"]["first_name"].capitalize()+"! Stay Home, Stay Safe!"
         update.message.reply_text(text)
     except Exception as e:
         print(e) 
