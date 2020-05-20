@@ -9,7 +9,7 @@ import pandas as pd
 TOKEN = "1156469077:AAGZvfC8XwNm7nqFUBvBhw6n2gYq1nb4WC4"
 t = "1115904035:AAG5x0dpPwmYNKRNBIHfjN7iADHTU4VN6UE"
 PORT = int(os.environ.get('PORT', 5000))
-LIVE_UPDATES, MENU, SET_STAT, CONTAINMENTZONE, TESTINGCENTERS, ECHO, SYMPTOMS, SAFETY = range(8)
+LIVE_UPDATES, MENU, SET_STAT, CONTAINMENTZONE, TESTINGCENTERS, HELPLINE_NUMBER, SYMPTOMS, SAFETY = range(8)
 STATE = SET_STAT
 
 def live_updates(bot,update):
@@ -110,17 +110,45 @@ def testingcenters(bot,update):
     except Exception as e:
         print(e)
 
+
+def helplinenumber(bot,update):
+    try:
+        bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
+        lstF = []
+        loc = update.message.location
+        user_lat = loc.latitude
+        user_long = loc.longitude
+        locTup = (user_lat,user_long)
+        worksheet = pd.read_csv('https://raw.githubusercontent.com/sanikachavan/covid19Care/master/coronvavirushelplinenumber.csv',sep=",")
+        state = worksheet['State'].tolist()
+        helplineNos = worksheet['Helpline Nos.'].tolist()
+        geolocator = Nominatim(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36")
+        location = geolocator.reverse(str(user_lat)+", "+str(user_long))
+        dataL = location.raw
+        district = dataL['address']['state_district']
+        stateL = dataL['address']['state']
+        print(district,stateL)
+        for (a,b) in zip(state, helplineNos):
+            if stateL==a:
+                print(a,b)
+                update.message.reply_text("Central Helpline Number: +91-11-23978046 and Toll Free: 1075 \nHelpline Email ID: ncov2019@gov.in")
+                update.message.reply_text("Helpline Number for "+a+" is "+str(b))
+    except Exception as e:
+        print(e)
+        
+        
+
 def menu(bot, update):
     try:
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         time.sleep(2)
-        keyboard = [['Containment_Zone'], ['Testing_Centers'],['Symptoms'],['Safety_Measures'],['Live_Updates']]
-
+        keyboard = [['Containment_Zone'], ['Testing_Centers'],['Symptoms'],['Safety_Measures'],['Live_Updates'],['Helpline_Number']]
         reply_markup = ReplyKeyboardMarkup(keyboard,one_time_keyboard=True,resize_keyboard=True)
         update.message.reply_text("Select an option to continue.", reply_markup=reply_markup)
         return SET_STAT
     except Exception as e:
         print(e)
+    
     
 def servicetype(bot, update):
     try:
@@ -153,6 +181,11 @@ def servicetype(bot, update):
             STATE = LIVE_UPDATES
             request_location(bot,update)
             return LIVE_UPDATES
+        elif update.message.text == 'Helpline_Number':
+            print('l')
+            STATE = HELPLINE_NUMBER
+            request_location(bot,update)
+            return HELPLINE_NUMBER
         else:
             STATE = MENU
             return MENU
@@ -172,7 +205,7 @@ def start(bot, update):
     try:
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         time.sleep(2)
-        keyboard = [['Containment_Zone'], ['Testing_Centers'],['Symptoms'],['Safety_Measures'],['Live_Updates']]
+        keyboard = [['Containment_Zone'], ['Testing_Centers'],['Symptoms'],['Safety_Measures'],['Live_Updates'],['Helpline_Number']]
         text = "Hello "+update["message"]["chat"]["first_name"].capitalize()+"! My Name is CovidCare Bot. I can help you by letting you by providing various details you need to know about corona virus. Select an option to continue."
         update.message.reply_text(text,reply_markup = ReplyKeyboardMarkup(keyboard,one_time_keyboard=True,resize_keyboard=True))
         return SET_STAT
@@ -196,7 +229,7 @@ def echo(bot, update):
         print(e)    
 
 def main():
-    updater = Updater(TOKEN)
+    updater = Updater(t)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
@@ -204,19 +237,20 @@ def main():
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start', start)],
         states={
-            SET_STAT: [RegexHandler('^(Containment_Zone|Testing_Centers|Symptoms|Safety_Measures|Live_Updates)$',servicetype )],
+            SET_STAT: [RegexHandler('^(Containment_Zone|Testing_Centers|Symptoms|Safety_Measures|Live_Updates|Helpline_Number)$',servicetype )],
             MENU: [CommandHandler('menu', menu)],
             CONTAINMENTZONE: [MessageHandler(Filters.location, containmentzone)],
             LIVE_UPDATES: [MessageHandler(Filters.location, live_updates)],
-            TESTINGCENTERS: [MessageHandler(Filters.location, testingcenters)]
+            TESTINGCENTERS: [MessageHandler(Filters.location, testingcenters)],
+            HELPLINE_NUMBER: [MessageHandler(Filters.location, helplinenumber)]
              },
         fallbacks=[CommandHandler('start', start),CommandHandler('menu', menu),CommandHandler('thanks', thanks)]
     )
 
     dp.add_handler(conv_handler)
-    #updater.start_polling()
-    #updater.idle()
-    updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
-    updater.bot.setWebhook('https://quiet-escarpment-71463.herokuapp.com/' + TOKEN)
+    updater.start_polling()
+    updater.idle()
+    #updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
+    #updater.bot.setWebhook('https://quiet-escarpment-71463.herokuapp.com/' + TOKEN)
 if __name__ == '__main__':
     main()
