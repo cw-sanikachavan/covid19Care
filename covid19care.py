@@ -315,7 +315,7 @@ def echo(bot, update):
         print(e)    
 
 def main():
-    updater = Updater(t)
+    updater = Updater(TOKEN)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
@@ -334,9 +334,10 @@ def main():
     )
 
     dp.add_handler(conv_handler)
-    updater.start_polling()
-    updater.idle()
-    #updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
-    #updater.bot.setWebhook('https://quiet-escarpment-71463.herokuapp.com/' + TOKEN)
+    #updater.start_polling()
+    #updater.idle()
+    updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
+    updater.bot.setWebhook('https://quiet-escarpment-71463.herokuapp.com/' + TOKEN)
+
 if __name__ == '__main__':
     main()
