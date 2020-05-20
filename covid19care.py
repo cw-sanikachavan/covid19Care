@@ -42,11 +42,12 @@ def live_updates(bot,update):
                     stateC= stateC + j['confirmed']
                     stateD = stateD + j['deceased']
                     if j['district'] == district:
-                        text = "Total Confirmed cases in "+district+" are: "+str(j['confirmed'])+"\nTotal Active cases in "+district+" are: "+ str(j['active'])+"\nTotal Recovered cases in "+district+" are: "+ str(j['recovered'])+"\nTotal Deceased cases in "+district+" are: "+ str(j['deceased'])
+                        text = "Total Confirmed cases in "+district+" are: "+str(j['confirmed'])+"\nTotal Active cases in "+district+" are: "+ str(j['active'])+"\nTotal Recovered cases in "+district+" are: "+ str(j['recovered'])+"\nTotal Deceased cases in "+district+" are: "+ str(j['deceased'])+"\nRecovery Rate in "+district+":"+str(round(j['recovered']/j['confirmed'],2))+"\nMortality Rate in "+district+":"+str(round(j['deceased']/j['confirmed'],2))
                         print(str(j['confirmed']))
+                        print(j['recovered']/j['confirmed'])
         print(stateA)
-        update.message.reply_text("Total Confirmed cases in India are: "+str(data['confirmed'])+"\nTotal Active cases in India are: "+ str(data['active'])+"\nTotal Recovered cases in India are: "+ str(data['recovered'])+"\nTotal Deceased cases in India are: "+ str(data['deaths']))
-        update.message.reply_text("Total Confirmed cases in "+state+" are: "+str(stateC)+"\nTotal Active cases in "+state+" are: "+ str(stateA)+"\nTotal Recovered cases in "+state+" are: "+ str(stateR)+"\nTotal Deceased cases in "+state+" are: "+ str(stateD))
+        update.message.reply_text("Total Confirmed cases in India are: "+str(data['confirmed'])+"\nTotal Active cases in India are: "+ str(data['active'])+"\nTotal Recovered cases in India are: "+ str(data['recovered'])+"\nTotal Deceased cases in India are: "+ str(data['deaths'])+"\nRecovery Rate in India:"+str(round(data['recovered']/data['confirmed'],2))+"\nMortality Rate in India:"+str(round(data['deaths']/data['confirmed'],2)))
+        update.message.reply_text("Total Confirmed cases in "+state+" are: "+str(stateC)+"\nTotal Active cases in "+state+" are: "+ str(stateA)+"\nTotal Recovered cases in "+state+" are: "+ str(stateR)+"\nTotal Deceased cases in "+state+" are: "+ str(stateD)+"\nRecovery Rate in "+state+":"+str(round(stateR/stateC,2))+"\nMortality Rate in "+state+":"+str(round(stateD/stateC,2)))
         update.message.reply_text(text)
         update.message.reply_text("Type /thanks if done or /menu to select another option.")
     except Exception as e:
@@ -133,6 +134,7 @@ def helplinenumber(bot,update):
                 print(a,b)
                 update.message.reply_text("Central Helpline Number: +91-11-23978046 and Toll Free: 1075 \nHelpline Email ID: ncov2019@gov.in")
                 update.message.reply_text("Helpline Number for "+a+" is "+str(b))
+                update.message.reply_text("Type /thanks if done or /menu to select another option.")
     except Exception as e:
         print(e)
         
