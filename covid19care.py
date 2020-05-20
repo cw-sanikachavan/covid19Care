@@ -135,15 +135,9 @@ def live_updates(bot,update):
                     if j['district'] == district:
                         text = "Total Confirmed cases in "+district+" are: "+str(j['confirmed'])+"\nTotal Active cases in "+district+" are: "+ str(j['active'])+"\nTotal Recovered cases in "+district+" are: "+ str(j['recovered'])+"\nTotal Deceased cases in "+district+" are: "+ str(j['deceased'])+"\nRecovery Rate in "+district+":"+str(round(j['recovered']/j['confirmed'],2))+"\nMortality Rate in "+district+":"+str(round(j['deceased']/j['confirmed'],2))
                         print(str(j['confirmed']))
-                        print(j['recovered']/j['confirmed'])
         print(stateA)
-<<<<<<< HEAD
         update.message.reply_text("Total Confirmed cases in India are: "+str(data['confirmed'])+"\nTotal Active cases in India are: "+ str(data['active'])+"\nTotal Recovered cases in India are: "+ str(data['recovered'])+"\nTotal Deceased cases in India are: "+ str(data['deaths']))+"\nRecovery Rate in India:"+str(round(data['recovered']/data['confirmed'],2))+"\nMortality Rate in India:"+str(round(data['deaths']/data['confirmed'],2)))
         update.message.reply_text("Total Confirmed cases in "+state+" are: "+str(stateC)+"\nTotal Active cases in "+state+" are: "+ str(stateA)+"\nTotal Recovered cases in "+state+" are: "+ str(stateR)+"\nTotal Deceased cases in "+state+" are: "+ str(stateD))+"\nRecovery Rate in "+state+":"+str(round(stateR/stateC,2))+"\nMortality Rate in "+state+":"+str(round(stateD/stateC,2)))
-=======
-        update.message.reply_text("Total Confirmed cases in India are: "+str(data['confirmed'])+"\nTotal Active cases in India are: "+ str(data['active'])+"\nTotal Recovered cases in India are: "+ str(data['recovered'])+"\nTotal Deceased cases in India are: "+ str(data['deaths'])+"\nRecovery Rate in India:"+str(round(data['recovered']/data['confirmed'],2))+"\nMortality Rate in India:"+str(round(data['deaths']/data['confirmed'],2)))
-        update.message.reply_text("Total Confirmed cases in "+state+" are: "+str(stateC)+"\nTotal Active cases in "+state+" are: "+ str(stateA)+"\nTotal Recovered cases in "+state+" are: "+ str(stateR)+"\nTotal Deceased cases in "+state+" are: "+ str(stateD)+"\nRecovery Rate in "+state+":"+str(round(stateR/stateC,2))+"\nMortality Rate in "+state+":"+str(round(stateD/stateC,2)))
->>>>>>> 86ab0ac454fdc6132320b52f94ef37ba5557e1f4
         update.message.reply_text(text)
         update.message.reply_text("Type /thanks if done or /menu to select another option.")
     except Exception as e:
@@ -207,51 +201,17 @@ def testingcenters(bot,update):
     except Exception as e:
         print(e)
 
-
-def helplinenumber(bot,update):
-    try:
-        bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
-        lstF = []
-        loc = update.message.location
-        user_lat = loc.latitude
-        user_long = loc.longitude
-        locTup = (user_lat,user_long)
-        worksheet = pd.read_csv('https://raw.githubusercontent.com/sanikachavan/covid19Care/master/coronvavirushelplinenumber.csv',sep=",")
-        state = worksheet['State'].tolist()
-        helplineNos = worksheet['Helpline Nos.'].tolist()
-        geolocator = Nominatim(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36")
-        location = geolocator.reverse(str(user_lat)+", "+str(user_long))
-        dataL = location.raw
-        district = dataL['address']['state_district']
-        stateL = dataL['address']['state']
-        print(district,stateL)
-        for (a,b) in zip(state, helplineNos):
-            if stateL==a:
-                print(a,b)
-                update.message.reply_text("Central Helpline Number: +91-11-23978046 and Toll Free: 1075 \nHelpline Email ID: ncov2019@gov.in")
-                update.message.reply_text("Helpline Number for "+a+" is "+str(b))
-                update.message.reply_text("Type /thanks if done or /menu to select another option.")
-    except Exception as e:
-        print(e)
-        
-        
-
 def menu(bot, update):
     try:
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         time.sleep(2)
-<<<<<<< HEAD
         keyboard = [['Containment_Zone'], ['Testing_Centers'],['Symptoms'],['Safety_Measures'],['Live_Updates'],['Helpline_Number'],['Immunity_Boosters'],['Myth_Busters']]
 
-=======
-        keyboard = [['Containment_Zone'], ['Testing_Centers'],['Symptoms'],['Safety_Measures'],['Live_Updates'],['Helpline_Number']]
->>>>>>> 86ab0ac454fdc6132320b52f94ef37ba5557e1f4
         reply_markup = ReplyKeyboardMarkup(keyboard,one_time_keyboard=True,resize_keyboard=True)
         update.message.reply_text("Select an option to continue.", reply_markup=reply_markup)
         return SET_STAT
     except Exception as e:
         print(e)
-    
     
 def servicetype(bot, update):
     try:
@@ -284,7 +244,6 @@ def servicetype(bot, update):
             STATE = LIVE_UPDATES
             request_location(bot,update)
             return LIVE_UPDATES
-<<<<<<< HEAD
         elif update.message.text == 'Myth_Busters':
             print('sy')
             myth_buster(bot,update)
@@ -293,8 +252,6 @@ def servicetype(bot, update):
             print('sy')
             immunity_boost(bot,update)
             return MENU
-=======
->>>>>>> 86ab0ac454fdc6132320b52f94ef37ba5557e1f4
         elif update.message.text == 'Helpline_Number':
             print('l')
             STATE = HELPLINE_NUMBER
@@ -319,11 +276,7 @@ def start(bot, update):
     try:
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         time.sleep(2)
-<<<<<<< HEAD
         keyboard = [['Containment_Zone'], ['Testing_Centers'],['Symptoms'],['Safety_Measures'],['Live_Updates'],['Helpline_Number'],['Immunity_Boosters'],['Myth_Busters']]
-=======
-        keyboard = [['Containment_Zone'], ['Testing_Centers'],['Symptoms'],['Safety_Measures'],['Live_Updates'],['Helpline_Number']]
->>>>>>> 86ab0ac454fdc6132320b52f94ef37ba5557e1f4
         text = "Hello "+update["message"]["chat"]["first_name"].capitalize()+"! My Name is CovidCare Bot. I can help you by letting you by providing various details you need to know about corona virus. Select an option to continue."
         update.message.reply_text(text,reply_markup = ReplyKeyboardMarkup(keyboard,one_time_keyboard=True,resize_keyboard=True))
         return SET_STAT
@@ -347,7 +300,7 @@ def echo(bot, update):
         print(e)    
 
 def main():
-    updater = Updater(t)
+    updater = Updater(TOKEN)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
@@ -355,11 +308,7 @@ def main():
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start', start)],
         states={
-<<<<<<< HEAD
             SET_STAT: [RegexHandler('^(Containment_Zone|Testing_Centers|Symptoms|Safety_Measures|Live_Updates|Helpline_Number|Immunity_Boosters|Myth_Busters)$',servicetype )],
-=======
-            SET_STAT: [RegexHandler('^(Containment_Zone|Testing_Centers|Symptoms|Safety_Measures|Live_Updates|Helpline_Number)$',servicetype )],
->>>>>>> 86ab0ac454fdc6132320b52f94ef37ba5557e1f4
             MENU: [CommandHandler('menu', menu)],
             CONTAINMENTZONE: [MessageHandler(Filters.location, containmentzone)],
             LIVE_UPDATES: [MessageHandler(Filters.location, live_updates)],
@@ -370,9 +319,9 @@ def main():
     )
 
     dp.add_handler(conv_handler)
-    updater.start_polling()
-    updater.idle()
-    #updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
-    #updater.bot.setWebhook('https://quiet-escarpment-71463.herokuapp.com/' + TOKEN)
+    #updater.start_polling()
+    #updater.idle()
+    updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
+    updater.bot.setWebhook('https://quiet-escarpment-71463.herokuapp.com/' + TOKEN)
 if __name__ == '__main__':
     main()
