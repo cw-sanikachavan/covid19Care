@@ -114,9 +114,9 @@ def menu(bot, update):
     try:
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         time.sleep(2)
-        keyboard = [['Containment_Zone', 'Testing_Centers','Symptoms','Safety_Measures','Live_Updates']]
+        keyboard = [['Containment_Zone'], ['Testing_Centers'],['Symptoms'],['Safety_Measures'],['Live_Updates']]
 
-        reply_markup = ReplyKeyboardMarkup(keyboard,one_time_keyboard=True)
+        reply_markup = ReplyKeyboardMarkup(keyboard,one_time_keyboard=True,resize_keyboard=True)
         update.message.reply_text("Select an option to continue.", reply_markup=reply_markup)
         return SET_STAT
     except Exception as e:
@@ -172,9 +172,9 @@ def start(bot, update):
     try:
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         time.sleep(2)
-        keyboard = [['Containment_Zone', 'Testing_Centers','Symptoms','Safety_Measures','Live_Updates']]
+        keyboard = [['Containment_Zone'], ['Testing_Centers'],['Symptoms'],['Safety_Measures'],['Live_Updates']]
         text = "Hello "+update["message"]["chat"]["first_name"].capitalize()+"! My Name is CovidCare Bot. I can help you by letting you by providing various details you need to know about corona virus. Select an option to continue."
-        update.message.reply_text(text,reply_markup = ReplyKeyboardMarkup(keyboard,one_time_keyboard=True))
+        update.message.reply_text(text,reply_markup = ReplyKeyboardMarkup(keyboard,one_time_keyboard=True,resize_keyboard=True))
         return SET_STAT
     except Exception as e:
         print(e) 
@@ -214,9 +214,9 @@ def main():
     )
 
     dp.add_handler(conv_handler)
-    #updater.start_polling()
-    #updater.idle()
-    updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
-    updater.bot.setWebhook('https://quiet-escarpment-71463.herokuapp.com/' + TOKEN)
+    updater.start_polling()
+    updater.idle()
+    #updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
+    #updater.bot.setWebhook('https://quiet-escarpment-71463.herokuapp.com/' + TOKEN)
 if __name__ == '__main__':
     main()
