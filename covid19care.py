@@ -19,7 +19,9 @@ def helplinenumber(bot,update):
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         lstF = []
         loc = update.message.location
+        global user_lat
         user_lat = loc.latitude
+        global user_long
         user_long = loc.longitude
         locTup = (user_lat,user_long)
         worksheet = pd.read_csv('https://raw.githubusercontent.com/sanikachavan/covid19Care/master/coronvavirushelplinenumber.csv',sep=",")
@@ -81,7 +83,6 @@ def immunity_boost(bot,update):
         return 
     except Exception as e:
         print(e)
-    
         update.message.reply_text("Service Timed Out. Please press start to continue.")
 
     
@@ -101,6 +102,8 @@ def live_updates(bot,update):
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         covid = Covid()
         data = covid.get_status_by_country_name("india")
+        global user_lat
+        global user_long
         loc = update.message.location
         user_lat = loc.latitude
         user_long = loc.longitude
@@ -172,6 +175,7 @@ def live_updatesR(bot,update):
         return
     except Exception as e:
         print(e)
+        update.message.reply_text("Service Timed Out. Please press start to continue.")
 
 def symptoms(bot, update):
     try:              
@@ -212,7 +216,6 @@ def containmentzone(bot, update):
         return SET_STAT
     except Exception as e:
         print(e)
-    
         update.message.reply_text("Service Timed Out. Please press start to continue.")
 
 def containmentzoneR(bot, update):
@@ -232,8 +235,7 @@ def containmentzoneR(bot, update):
         update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
         return 
     except Exception as e:
-        print(e)
-    
+        print(e)    
         update.message.reply_text("Service Timed Out. Please press start to continue.")
 
 def testingcenters(bot,update):
@@ -264,6 +266,7 @@ def testingcenters(bot,update):
         return SET_STAT
     except Exception as e:
         print(e)
+        update.message.reply_text("Service Timed Out. Please press start to continue.")
 
 def testingcentersR(bot,update):
     try:
@@ -293,6 +296,7 @@ def testingcentersR(bot,update):
         return
     except Exception as e:
         print(e)
+        update.message.reply_text("Service Timed Out. Please press start to continue.")
 
 def menu(bot, update):
     try:
@@ -302,7 +306,6 @@ def menu(bot, update):
 
         reply_markup = ReplyKeyboardMarkup(keyboard,one_time_keyboard=True,resize_keyboard=True)
         update.message.reply_text("Select an option to continue.", reply_markup=reply_markup)
-        return SET_STAT
     except Exception as e:
         print(e)
     
@@ -333,7 +336,7 @@ def servicetype(bot, update):
         elif update.message.text == 'Symptoms':
             print('sy')
             symptoms(bot, update)
-            return MENU
+            return SET_STAT
         elif update.message.text == 'Safety Measures':
             print('sf')
             STATE = SAFETY
@@ -341,6 +344,7 @@ def servicetype(bot, update):
             return SET_STAT
         elif update.message.text == 'Live Updates':
             print('l')
+            print(user_lat)
             if user_lat == 0:
                 STATE = LIVE_UPDATES
                 request_location(bot,update)
@@ -370,7 +374,10 @@ def servicetype(bot, update):
             thanks(bot,update)
             return SET_STAT
         elif update.message.text == 'Menu':
-            return MENU
+            print("m")
+            STATE = MENU
+            menu(bot,update)
+            return SET_STAT
         else:
             STATE = MENU
             return MENU
@@ -444,11 +451,11 @@ def main():
             SET_STAT: [RegexHandler('^(Containment Zone|Testing Centers|Symptoms|Safety Measures|Live Updates|Helpline Number|Immunity Boosters|Myth Busters|Thanks|Menu)$',servicetype)],
             MENU: [MessageHandler(Filters.text, menu)],
             CONTAINMENTZONE: [MessageHandler(Filters.location, containmentzone),CommandHandler('cancel', cancel),MessageHandler(Filters.text, echo)],
-            LIVE_UPDATES: [MessageHandler(Filters.location, live_updates),MessageHandler(Filters.text, echo)],
-            TESTINGCENTERS: [MessageHandler(Filters.location, testingcenters),MessageHandler(Filters.text, echo)],
-            HELPLINE_NUMBER: [MessageHandler(Filters.location, helplinenumber),MessageHandler(Filters.text, echo)]
+            LIVE_UPDATES: [MessageHandler(Filters.location, live_updates),CommandHandler('cancel', cancel),MessageHandler(Filters.text, echo)],
+            TESTINGCENTERS: [MessageHandler(Filters.location, testingcenters),CommandHandler('cancel', cancel),MessageHandler(Filters.text, echo)],
+            HELPLINE_NUMBER: [MessageHandler(Filters.location, helplinenumber),CommandHandler('cancel', cancel),MessageHandler(Filters.text, echo)]
              },
-        fallbacks=[CommandHandler('start', start),CommandHandler('menu', menu),CommandHandler('cancel', cancel)]
+        fallbacks=[CommandHandler('start', start),CommandHandler('cancel', cancel),MessageHandler(Filters.text, menu)]
     )
 
     dp.add_handler(conv_handler)
