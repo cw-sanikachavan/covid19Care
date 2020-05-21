@@ -9,7 +9,7 @@ import pandas as pd
 TOKEN = "1156469077:AAGZvfC8XwNm7nqFUBvBhw6n2gYq1nb4WC4"
 t = "1115904035:AAG5x0dpPwmYNKRNBIHfjN7iADHTU4VN6UE"
 PORT = int(os.environ.get('PORT', 5000))
-LIVE_UPDATES, MENU, SET_STAT, CONTAINMENTZONE, TESTINGCENTERS, HELPLINE_NUMBER, CONTAINMENTZONER, SAFETY = range(8)
+LIVE_UPDATES, MENU, SET_STAT, CONTAINMENTZONE, TESTINGCENTERS, HELPLINE_NUMBER, CONTAINMENTZONER, SAFETY, SYMPTOMS, THANKS = range(10)
 STATE = SET_STAT
 user_lat = 0
 user_long = 0
@@ -77,7 +77,7 @@ def immunity_boost(bot,update):
         bot.send_photo(chat_id=update.message.chat.id, photo="https://www.ayush.gov.in/img/m4.jpeg")
         update.message.reply_text("Source: https://www.ayush.gov.in/")
         update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
-        return SET_STAT
+        return 
     except Exception as e:
         print(e)
     
@@ -89,7 +89,7 @@ def myth_buster(bot,update):
         bot.send_document(chat_id=update.message.chat.id, document=open("MythsVsFacts.pdf","rb"))
         update.message.reply_text("Source: MyGov Corona Hub FB Page")
         update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
-        return SET_STAT
+        return 
     except Exception as e:
         print(e)
         update.message.reply_text("Service Timed Out. Please press start to continue.")
@@ -175,7 +175,7 @@ def symptoms(bot, update):
     try:              
         update.message.reply_text("Common-Symptoms: \n1.Fever \n2.Tiredness \n3.Dry Cough \n\nAdditional-Symptoms: \n1.Aches And Pains \n2.Nasal Congestion \n3.Runny Nose \n4.Sore Throat \n5.Diarrhoea")
         update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
-        return SET_STAT
+        return 
     except Exception as e:
         print(e)
         
@@ -183,7 +183,7 @@ def safety(bot, update):
     try:              
         update.message.reply_text("Safety Facts: \n1.Clean your hands often. Use soap and water, or an alcohol-based hand rub. \n2.Maintain a safe distance from anyone who is coughing or sneezing. \n3.Don\u2019t touch your eyes, nose or mouth. \n4.Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze. \n5.Stay home if you feel unwell. \n6.If you have a fever, a cough, and difficulty breathing, seek medical attention. Call in advance. \n7.Follow the directions of your local health authority.")
         update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
-        return SET_STAT
+        return 
     except Exception as e:
         print(e)
 
@@ -318,7 +318,7 @@ def servicetype(bot, update):
             else:
                 STATE = CONTAINMENTZONER
                 containmentzoneR(bot,update)
-                return MENU
+                return SET_STAT
         elif update.message.text == 'Testing Centers':
             print('t')
             if user_lat == 0:
@@ -327,7 +327,7 @@ def servicetype(bot, update):
                 return TESTINGCENTERS
             else:
                 testingcentersR(bot,update)
-                return MENU
+                return SET_STAT
         elif update.message.text == 'Symptoms':
             print('sy')
             symptoms(bot, update)
@@ -336,7 +336,7 @@ def servicetype(bot, update):
             print('sf')
             STATE = SAFETY
             safety(bot, update)
-            return MENU
+            return SET_STAT
         elif update.message.text == 'Live Updates':
             print('l')
             if user_lat == 0:
@@ -345,15 +345,15 @@ def servicetype(bot, update):
                 return LIVE_UPDATES
             else:
                 live_updatesR(bot,update)
-                return MENU
+                return SET_STAT
         elif update.message.text == 'Myth Busters':
             print('sy')
             myth_buster(bot,update)
-            return MENU
+            return SET_STAT
         elif update.message.text == 'Immunity Boosters':
             print('sy')
             immunity_boost(bot,update)
-            return MENU
+            return SET_STAT
         elif update.message.text == 'Helpline Number':
             print('l')
             if user_lat == 0:
@@ -362,10 +362,11 @@ def servicetype(bot, update):
                 return HELPLINE_NUMBER
             else:
                 helplinenumberR(bot,update)
-                return MENU
+                return SET_STAT
         elif update.message.text == 'Thanks':
-            print('sy')
+            print("Finally")
             thanks(bot,update)
+            return SET_STAT
         elif update.message.text == 'Menu':
             return MENU
         else:
@@ -379,7 +380,7 @@ def request_location(bot, update):
     try:
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         time.sleep(2)
-        update.message.reply_text("Please attach your location from the Attachment option.")
+        update.message.reply_text("Please attach your location from the Attachment option.",reply_markup=ReplyKeyboardRemove())
         return
     except Exception as e:
         print(e)
@@ -393,7 +394,7 @@ def start(bot, update):
         user_lat = 0
         user_long = 0
         keyboard = [['Containment Zone', 'Testing Centers'],['Symptoms','Safety Measures'],['Live Updates','Helpline Number'],['Immunity Boosters','Myth Busters']]
-        text = "Hello "+update["message"]["chat"]["first_name"].capitalize()+"! My Name is CovidCare Bot. I can help you by letting you by providing various details you need to know about corona virus. Select an option to continue."
+        text = "Hello "+update["message"]["chat"]["first_name"].capitalize()+"! My Name is CovidCare Bot. I can help you by providing various details you need to know about corona virus,like, \n 1. Check if your home is located within a containment area, and also check what colour zone your place of residence falls under.\n 2. Locate testing centres close to your home. \n 3. Check Live updates of Cases, Recovery and Fatality rate across the country, your state and your district. \n 4. Get information about the government issued helplines for Covid - 19 for your state as well as for the country. \n 5. Obtain information about the various Ayurvedic and Home remedies that can boost your immunity. \n 6. Be aware of various myths that have been spreading around the world. \n 7. Know what safety measures to be followed. \n 8. Also know what symptoms are to be paid attention to. \n\n Select an option to continue."
         update.message.reply_text(text,reply_markup = ReplyKeyboardMarkup(keyboard,one_time_keyboard=True,resize_keyboard=True))
         return SET_STAT
     except Exception as e:
@@ -410,12 +411,23 @@ def thanks(bot, update):
         text = "You're Welcome "+update["message"]["chat"]["first_name"].capitalize()+"! Stay Home, Stay Safe!"
         update.message.reply_text(text)
     except Exception as e:
-        print(e) 
+        print(e)
+        
 def echo(bot, update):
     try:
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
-        text = "Please attach your location from the Attachment option."
+        text = "Please attach your location from the Attachment option or /cancel to cancel this action."
+        update.message.reply_text(text,reply_markup=ReplyKeyboardRemove())
+    except Exception as e:
+        print(e)    
+
+def cancel(bot, update):
+    try:
+        bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
+        text = "User Cancelled this action."
         update.message.reply_text(text)
+        update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
+        return SET_STAT
     except Exception as e:
         print(e)    
 
@@ -429,12 +441,12 @@ def main():
         states={
             SET_STAT: [RegexHandler('^(Containment Zone|Testing Centers|Symptoms|Safety Measures|Live Updates|Helpline Number|Immunity Boosters|Myth Busters|Thanks|Menu)$',servicetype)],
             MENU: [MessageHandler(Filters.text, menu)],
-            CONTAINMENTZONE: [MessageHandler(Filters.location, containmentzone),MessageHandler(Filters.text, echo)],
+            CONTAINMENTZONE: [MessageHandler(Filters.location, containmentzone),CommandHandler('cancel', cancel),MessageHandler(Filters.text, echo)],
             LIVE_UPDATES: [MessageHandler(Filters.location, live_updates),MessageHandler(Filters.text, echo)],
             TESTINGCENTERS: [MessageHandler(Filters.location, testingcenters),MessageHandler(Filters.text, echo)],
             HELPLINE_NUMBER: [MessageHandler(Filters.location, helplinenumber),MessageHandler(Filters.text, echo)]
              },
-        fallbacks=[CommandHandler('start', start),CommandHandler('menu', menu),CommandHandler('thanks', thanks)]
+        fallbacks=[CommandHandler('start', start),CommandHandler('menu', menu),CommandHandler('cancel', cancel)]
     )
 
     dp.add_handler(conv_handler)
