@@ -36,8 +36,8 @@ def helplinenumber(bot,update):
                 print(a,b)
                 update.message.reply_text("Central Helpline Number: +91-11-23978046 and Toll Free: 1075 \nHelpline Email ID: ncov2019@gov.in")
                 update.message.reply_text("Helpline Number for "+a+" is "+str(b))
-                update.message.reply_text("Type /thanks if done or /menu to select another option.")
-        return MENU
+                update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
+        return SET_STAT
     except Exception as e:
         print(e)    
         update.message.reply_text("Service Timed Out. Please press start to continue.")
@@ -64,7 +64,7 @@ def helplinenumberR(bot,update):
                 print(a,b)
                 update.message.reply_text("Central Helpline Number: +91-11-23978046 and Toll Free: 1075 \nHelpline Email ID: ncov2019@gov.in")
                 update.message.reply_text("Helpline Number for "+a+" is "+str(b))
-                update.message.reply_text("Type /thanks if done or /menu to select another option.")
+                update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
         return
     except Exception as e:
         print(e)    
@@ -76,7 +76,8 @@ def immunity_boost(bot,update):
         bot.send_photo(chat_id=update.message.chat.id, photo="https://www.ayush.gov.in/img/m3.jpeg")
         bot.send_photo(chat_id=update.message.chat.id, photo="https://www.ayush.gov.in/img/m4.jpeg")
         update.message.reply_text("Source: https://www.ayush.gov.in/")
-        update.message.reply_text("Type /thanks if done or /menu to select another option.")
+        update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
+        return SET_STAT
     except Exception as e:
         print(e)
     
@@ -87,7 +88,8 @@ def myth_buster(bot,update):
     try:
         bot.send_document(chat_id=update.message.chat.id, document=open("MythsVsFacts.pdf","rb"))
         update.message.reply_text("Source: MyGov Corona Hub FB Page")
-        update.message.reply_text("Type /thanks if done or /menu to select another option.")
+        update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
+        return SET_STAT
     except Exception as e:
         print(e)
         update.message.reply_text("Service Timed Out. Please press start to continue.")
@@ -125,8 +127,8 @@ def live_updates(bot,update):
         update.message.reply_text("Total Confirmed cases in India are: "+str(data['confirmed'])+"\nTotal Active cases in India are: "+ str(data['active'])+"\nTotal Recovered cases in India are: "+ str(data['recovered'])+"\nTotal Deaths cases in India are: "+ str(data['deaths'])+"\nRecovery Rate in India:"+str(round(data['recovered']/data['confirmed'],2))+"\nMortality Rate in India:"+str(round(data['deaths']/data['confirmed'],2)))
         update.message.reply_text("Total Confirmed cases in "+state+" are: "+str(stateC)+"\nTotal Active cases in "+state+" are: "+ str(stateA)+"\nTotal Recovered cases in "+state+" are: "+ str(stateR)+"\nTotal Deaths cases in "+state+" are: "+ str(stateD)+"\nRecovery Rate in "+state+":"+str(round(stateR/stateC,2))+"\nMortality Rate in "+state+":"+str(round(stateD/stateC,2)))
         update.message.reply_text(text)
-        update.message.reply_text("Type /thanks if done or /menu to select another option.")
-        return MENU
+        update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
+        return SET_STAT
     except Exception as e:
         print(e)
         update.message.reply_text("Service Timed Out. Please press start to continue.")
@@ -164,7 +166,7 @@ def live_updatesR(bot,update):
         update.message.reply_text("Total Confirmed cases in India are: "+str(data['confirmed'])+"\nTotal Active cases in India are: "+ str(data['active'])+"\nTotal Recovered cases in India are: "+ str(data['recovered'])+"\nTotal Deaths cases in India are: "+ str(data['deaths'])+"\nRecovery Rate in India:"+str(round(data['recovered']/data['confirmed'],2))+"\nMortality Rate in India:"+str(round(data['deaths']/data['confirmed'],2)))
         update.message.reply_text("Total Confirmed cases in "+state+" are: "+str(stateC)+"\nTotal Active cases in "+state+" are: "+ str(stateA)+"\nTotal Recovered cases in "+state+" are: "+ str(stateR)+"\nTotal Deaths cases in "+state+" are: "+ str(stateD)+"\nRecovery Rate in "+state+":"+str(round(stateR/stateC,2))+"\nMortality Rate in "+state+":"+str(round(stateD/stateC,2)))
         update.message.reply_text(text)
-        update.message.reply_text("Type /thanks if done or /menu to select another option.")
+        update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
         return
     except Exception as e:
         print(e)
@@ -172,14 +174,16 @@ def live_updatesR(bot,update):
 def symptoms(bot, update):
     try:              
         update.message.reply_text("Common-Symptoms: \n1.Fever \n2.Tiredness \n3.Dry Cough \n\nAdditional-Symptoms: \n1.Aches And Pains \n2.Nasal Congestion \n3.Runny Nose \n4.Sore Throat \n5.Diarrhoea")
-        update.message.reply_text("Type /thanks if done or /menu to select another option.")
+        update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
+        return SET_STAT
     except Exception as e:
         print(e)
         
 def safety(bot, update):
     try:              
         update.message.reply_text("Safety Facts: \n1.Clean your hands often. Use soap and water, or an alcohol-based hand rub. \n2.Maintain a safe distance from anyone who is coughing or sneezing. \n3.Don\u2019t touch your eyes, nose or mouth. \n4.Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze. \n5.Stay home if you feel unwell. \n6.If you have a fever, a cough, and difficulty breathing, seek medical attention. Call in advance. \n7.Follow the directions of your local health authority.")
-        update.message.reply_text("Type /thanks if done or /menu to select another option.")
+        update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
+        return SET_STAT
     except Exception as e:
         print(e)
 
@@ -202,8 +206,8 @@ def containmentzone(bot, update):
         else:
             text = "Congratulations, your location doesnt fall under the containment region." +"It lies in the "+contents['data'][0]['districtZoneType']+"."+" Stay Home, Stay Safe"
         update.message.reply_text(text)
-        update.message.reply_text("Type /thanks if done or /menu to select another option.")
-        return MENU
+        update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
+        return SET_STAT
     except Exception as e:
         print(e)
     
@@ -223,8 +227,8 @@ def containmentzoneR(bot, update):
         else:
             text = "Congratulations, your location doesnt fall under the containment region." +"It lies in the "+contents['data'][0]['districtZoneType']+"."+" Stay Home, Stay Safe"
         update.message.reply_text(text)
-        update.message.reply_text("Type /thanks if done or /menu to select another option.")
-        return
+        update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
+        return 
     except Exception as e:
         print(e)
     
@@ -254,8 +258,8 @@ def testingcenters(bot,update):
         update.message.reply_text("The 5 closest testing centers to your location are:")
         for i in range(1,6):
             update.message.reply_text(str(i)+". "+sLst[i][1]+" Type: "+sLst[i][0])
-        update.message.reply_text("Type /thanks if done or /menu to select another option.")
-        return MENU
+        update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
+        return SET_STAT
     except Exception as e:
         print(e)
 
@@ -283,7 +287,7 @@ def testingcentersR(bot,update):
         update.message.reply_text("The 5 closest testing centers to your location are:")
         for i in range(1,6):
             update.message.reply_text(str(i)+". "+sLst[i][1]+" Type: "+sLst[i][0])
-        update.message.reply_text("Type /thanks if done or /menu to select another option.")
+        update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
         return
     except Exception as e:
         print(e)
@@ -326,7 +330,6 @@ def servicetype(bot, update):
                 return MENU
         elif update.message.text == 'Symptoms':
             print('sy')
-            STATE = SYMPTOMS
             symptoms(bot, update)
             return MENU
         elif update.message.text == 'Safety Measures':
@@ -360,6 +363,12 @@ def servicetype(bot, update):
             else:
                 helplinenumberR(bot,update)
                 return MENU
+        elif update.message.text == 'Thanks':
+            print('sy')
+            thanks(bot,update)
+            return MENU
+        elif update.message.text == 'Menu':
+            return MENU
         else:
             STATE = MENU
             return MENU
@@ -380,6 +389,8 @@ def start(bot, update):
     try:
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         time.sleep(2)
+        user_lat = 0
+        user_long = 0
         keyboard = [['Containment Zone', 'Testing Centers'],['Symptoms','Safety Measures'],['Live Updates','Helpline Number'],['Immunity Boosters','Myth Busters']]
         text = "Hello "+update["message"]["chat"]["first_name"].capitalize()+"! My Name is CovidCare Bot. I can help you by letting you by providing various details you need to know about corona virus. Select an option to continue."
         update.message.reply_text(text,reply_markup = ReplyKeyboardMarkup(keyboard,one_time_keyboard=True,resize_keyboard=True))
@@ -415,8 +426,8 @@ def main():
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start', start)],
         states={
-            SET_STAT: [RegexHandler('^(Containment Zone|Testing Centers|Symptoms|Safety Measures|Live Updates|Helpline Number|Immunity Boosters|Myth Busters)$',servicetype )],
-            MENU: [CommandHandler('menu', menu)],
+            SET_STAT: [RegexHandler('^(Containment Zone|Testing Centers|Symptoms|Safety Measures|Live Updates|Helpline Number|Immunity Boosters|Myth Busters|Thanks|Menu)$',servicetype)],
+            MENU: [MessageHandler(Filters.text, menu)],
             CONTAINMENTZONE: [MessageHandler(Filters.location, containmentzone),MessageHandler(Filters.text, echo)],
             LIVE_UPDATES: [MessageHandler(Filters.location, live_updates),MessageHandler(Filters.text, echo)],
             TESTINGCENTERS: [MessageHandler(Filters.location, testingcenters),MessageHandler(Filters.text, echo)],
