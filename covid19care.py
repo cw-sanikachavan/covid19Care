@@ -366,7 +366,6 @@ def servicetype(bot, update):
         elif update.message.text == 'Thanks':
             print('sy')
             thanks(bot,update)
-            return MENU
         elif update.message.text == 'Menu':
             return MENU
         else:
@@ -389,6 +388,8 @@ def start(bot, update):
     try:
         bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         time.sleep(2)
+        global user_lat
+        global user_long
         user_lat = 0
         user_long = 0
         keyboard = [['Containment Zone', 'Testing Centers'],['Symptoms','Safety Measures'],['Live Updates','Helpline Number'],['Immunity Boosters','Myth Busters']]
