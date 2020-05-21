@@ -72,6 +72,7 @@ def helplinenumberR(bot,update):
 
 def immunity_boost(bot,update):
     try:
+        bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         bot.send_photo(chat_id=update.message.chat.id, photo="https://www.ayush.gov.in/img/m2.jpeg")
         bot.send_photo(chat_id=update.message.chat.id, photo="https://www.ayush.gov.in/img/m3.jpeg")
         bot.send_photo(chat_id=update.message.chat.id, photo="https://www.ayush.gov.in/img/m4.jpeg")
@@ -86,6 +87,7 @@ def immunity_boost(bot,update):
     
 def myth_buster(bot,update):
     try:
+        bot.send_chat_action(chat_id=update["message"]["chat"]["id"], action=telegram.ChatAction.TYPING)
         bot.send_document(chat_id=update.message.chat.id, document=open("MythsVsFacts.pdf","rb"))
         update.message.reply_text("Source: MyGov Corona Hub FB Page")
         update.message.reply_text("Select an option to continue.",reply_markup = ReplyKeyboardMarkup(keyboard= [['Thanks', 'Menu']],one_time_keyboard=True,resize_keyboard=True))
