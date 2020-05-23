@@ -24,7 +24,7 @@ def helplinenumber(bot,update):
         global user_long
         user_long = loc.longitude
         locTup = (user_lat,user_long)
-        worksheet = pd.read_csv('https://raw.githubusercontent.com/sanikachavan/covid19Care/master/coronvavirushelplinenumber.csv',sep=",")
+        worksheet = pd.read_csv('coronvavirushelplinenumber.csv')
         state = worksheet['State'].tolist()
         helplineNos = worksheet['Helpline Nos.'].tolist()
         geolocator = Nominatim(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36")
@@ -52,7 +52,7 @@ def helplinenumberR(bot,update):
         #user_lat = loc.latitude
         #user_long = loc.longitude
         locTup = (user_lat,user_long)
-        worksheet = pd.read_csv('https://raw.githubusercontent.com/sanikachavan/covid19Care/master/coronvavirushelplinenumber.csv',sep=",")
+        worksheet = pd.read_csv('coronvavirushelplinenumber.csv')
         state = worksheet['State'].tolist()
         helplineNos = worksheet['Helpline Nos.'].tolist()
         geolocator = Nominatim(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36")
@@ -248,7 +248,7 @@ def testingcenters(bot,update):
         global user_long
         user_long = loc.longitude
         locTup = (user_lat,user_long)
-        worksheet = pd.read_csv('https://raw.githubusercontent.com/sanikachavan/covid19Care/master/testcenter.csv',sep=",")
+        worksheet = pd.read_csv('testcenter.csv')
         types = worksheet['Type'].tolist()
         hospitals = worksheet['Hospital'].tolist()
         latitude = worksheet['Latitude'].tolist()
@@ -278,7 +278,7 @@ def testingcentersR(bot,update):
         global user_long
         #user_long = loc.longitude
         locTup = (user_lat,user_long)
-        worksheet = pd.read_csv('https://raw.githubusercontent.com/sanikachavan/covid19Care/master/testcenter.csv',sep=",")
+        worksheet = pd.read_csv('testcenter.csv')
         types = worksheet['Type'].tolist()
         hospitals = worksheet['Hospital'].tolist()
         latitude = worksheet['Latitude'].tolist()
